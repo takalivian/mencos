@@ -43,7 +43,9 @@ ActiveRecord::Schema.define(version: 2020_05_22_071841) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id"
+    t.bigint "user_id"
     t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -68,4 +70,5 @@ ActiveRecord::Schema.define(version: 2020_05_22_071841) do
 
   add_foreign_key "images", "posts"
   add_foreign_key "posts", "categories"
+  add_foreign_key "posts", "users"
 end
