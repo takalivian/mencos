@@ -6,12 +6,29 @@
     width: 980px;
     margin: 0 auto;
     display: flex;
-    &__title {
+    justify-content: space-between;
+    line-height: 4rem;
+    &__right {
       font-size: xx-large;
-      line-height: 4rem;
+      
       .btn-top {
         text-decoration: none;
         color: $mainColor;
+      }
+    }
+    &__left {
+      display: flex;
+      text-decoration: none;
+      &__user {
+        margin-right: 1rem;
+        .btn-user {
+          text-decoration: none;
+        }
+      }
+      &__post {
+        .btn-post {
+          text-decoration: none;
+        }
       }
     }
   }
