@@ -1,0 +1,13 @@
+.top-main {
+  max-width: 980px;
+  margin: 0 auto;
+  // background-color: salmon;
+  &__content {
+    &__category {
+      &__title {
+        font-weight: bold;
+        font-size: xx-large;
+      }
+    }
+  }
+}
