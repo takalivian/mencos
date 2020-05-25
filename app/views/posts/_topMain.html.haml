@@ -95,9 +95,9 @@
               %td.top-main__contents__new-posts__content__title
                 投稿者
               %td.top-main__contents__new-posts__content__body
-                高村
+                たっかむ
               %td.top-main__contents__new-posts__content__body
-                高村
+                たっかむ
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品リンク
@@ -105,3 +105,26 @@
                 評価を見る
               %td.top-main__contents__new-posts__content__body
                 評価を見る
+    -# 人気ユーザー
+    .top-main__contents__users
+      .top-main__contents__users__title
+        人気のユーザー
+      .top-main__contents__users__content
+        = link_to  "#" do
+          .top-main__contents__users__content__user
+            .top-main__contents__users__content__user__image
+              = image_tag "wash.jpg", alt: "pic", class: 'image'
+            .top-main__contents__users__content__user__name
+              たっかむ
+            .top-main__contents__users__content__user__follower
+              = icon('fas', 'user')
+              324324
+        = link_to  "#" do
+          .top-main__contents__users__content__user
+            .top-main__contents__users__content__user__image
+              = image_tag "wash.jpg", alt: "pic", class: 'image'
+            .top-main__contents__users__content__user__name
+              たっかむ
+            .top-main__contents__users__content__user__follower
+              = icon('fas', 'user')
+              324324

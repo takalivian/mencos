@@ -19,7 +19,7 @@
           & li {
             padding: 2% 0;
             .title {
-              color: #111;
+              color: $mainBlack;
               text-align: center;
               font-size: larger;
             }
@@ -37,6 +37,7 @@
       &__content {
         width: 100%;
         display: flex;
+        overflow: scroll;
         &__head {
           width: 100%;
           font-weight: 300;      
@@ -57,6 +58,45 @@
             }
           }
         }
+      }
+    }
+    &__users {
+      margin-bottom: 4%;
+      &__title {
+        font-weight: bold;
+        font-size: xx-large;
+        margin-bottom: 1%;
+      }
+      &__content {
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        &__user  {
+          color: $mainBlack;
+          width: 144px;
+          flex-shrink: 0;
+          border-radius: 16px;
+          border: 2px solid #F5F5F5;
+          box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
+          margin: 16px 8px;
+          text-align: center;
+          padding: 10px;
+          &__image {
+            .image {
+              width: 100%;
+              object-fit: contain;
+              border-radius: 50%;
+            }
+          }
+          &__name {
+            font-size: large;
+            font-weight: bold;
+          }
+          &__follower {
+            font-size: x-small;
+            color: #999;
+          }
+        } 
       }
     }
   }
