@@ -1,13 +1,32 @@
 .top-main {
   max-width: 980px;
   margin: 0 auto;
-  // background-color: salmon;
-  &__content {
+  &__contents {
     &__category {
       &__title {
         font-weight: bold;
         font-size: xx-large;
       }
+      &__content {
+        width: 100%;
+        & ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          & li {
+            padding: 2% 0;
+            .title {
+              color: #111;
+              text-align: center;
+              font-size: larger;
+            }
+          }
+        }
+      }
     }
   }
+}
+a {
+  text-decoration: none;
 }

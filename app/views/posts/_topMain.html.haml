@@ -1,6 +1,43 @@
 .top-main
-  .top-main__content
-    .top-main__content__category
-      .top-main__content__category__title
+  .top-main__contents
+    .top-main__contents__category
+      .top-main__contents__category__title
         カテゴリーから探す
-      %ul
+      .top-main__contents__category__content
+        %ul
+          %li
+            = link_to  "#" do
+              = image_tag "wash.jpg", width: "250", height: "250", alt: "pic", class: 'image_drink'
+              %br/
+              .title
+                スキンケア
+          %li.category-make
+            = link_to  "#" do
+              = image_tag "make.jpg", width: "250", height: "250", alt: "pic", class: 'image_drink'
+              %br/
+              .title
+                メイクアップ
+          %li.category-hair
+            = link_to  "#" do
+              = image_tag "wax.png", width: "250", height: "250", alt: "pic", class: 'image_drink'
+              %br/
+              .title
+                ヘアスタイリング剤
+          %li.category-shaver
+            = link_to  "#" do
+              = image_tag "shaver.jpg", width: "250", height: "250", alt: "pic", class: 'image_drink'
+              %br/
+              .title
+                シェーバー
+          %li.category-perfume
+            = link_to  "#" do
+              = image_tag "perfume.jpg", width: "250", height: "250", alt: "pic", class: 'image_drink'
+              %br/
+              .title
+                フレグランス
+          %li.category-bath
+            = link_to  "#" do
+              = image_tag "shampoo.jpg", width: "250", height: "250", alt: "pic", class: 'image_drink'
+              %br/
+              .title
+                バス用品
