@@ -1,0 +1,20 @@
+.top-content {
+  background-image: image-url("cosme.jpg");
+  height: 48rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  display:  block;
+  margin: 0 auto;
+  position:  relative;
+  animation: anime1 3s ease;
+}
+@keyframes anime1 {
+  0% {
+      opacity:  0;
+      top: 50px;
+  }
+  100% {
+      opacity:  1;
+      top: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.footer {
+  width: 100vw;
+  background-color: #F4F3F4;
+  &__content {
+    text-align: center;
+    padding: 2rem 0;
+    &__top {
+      font-size: x-large;
+      .btn-top {
+        text-decoration: none;
+        color: $mainColor;
+      }
+    }
+    &__bottom {
+      font-size: x-small;
+    }
+  }
+}

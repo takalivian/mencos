@@ -1,0 +1,132 @@
+.top-main
+  .top-main__contents
+    -# カテゴリー
+    .top-main__contents__category
+      .top-main__contents__category__title
+        カテゴリーから探す
+      .top-main__contents__category__content
+        %ul
+          %li
+            = link_to  "#" do
+              = image_tag "wash.jpg", width: "250", height: "250", alt: "pic", class: 'image'
+              %br/
+              .title
+                スキンケア
+          %li.category-make
+            = link_to  "#" do
+              = image_tag "make.jpg", width: "250", height: "250", alt: "pic", class: 'image'
+              %br/
+              .title
+                メイクアップ
+          %li.category-hair
+            = link_to  "#" do
+              = image_tag "wax.png", width: "250", height: "250", alt: "pic", class: 'image'
+              %br/
+              .title
+                ヘアスタイリング剤
+          %li.category-shaver
+            = link_to  "#" do
+              = image_tag "shaver.jpg", width: "250", height: "250", alt: "pic", class: 'image'
+              %br/
+              .title
+                シェーバー
+          %li.category-perfume
+            = link_to  "#" do
+              = image_tag "perfume.jpg", width: "250", height: "250", alt: "pic", class: 'image'
+              %br/
+              .title
+                フレグランス
+          %li.category-bath
+            = link_to  "#" do
+              = image_tag "shampoo.jpg", width: "250", height: "250", alt: "pic", class: 'image'
+              %br/
+              .title
+                バス用品
+    -# 新着投稿
+    .top-main__contents__new-posts
+      .top-main__contents__new-posts__title
+        最新のクチコミ
+      .top-main__contents__new-posts__content
+        .top-main__contents__new-posts__content__head
+          %table
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                商品画像
+              %td
+                = image_tag "shampoo.jpg", width: "150", height: "150", alt: "pic", class: 'image'
+              %td
+                = image_tag "shampoo.jpg", width: "150", height: "150", alt: "pic", class: 'image'
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                ブランド
+              %td.top-main__contents__new-posts__content__body
+                GATSBY
+              %td.top-main__contents__new-posts__content__body
+                GATSBY
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                商品名
+              %td.top-main__contents__new-posts__content__body
+                パーフェクトクリアシャンプー
+              %td.top-main__contents__new-posts__content__body
+                パーフェクトクリアシャンプー
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                カテゴリー
+              %td.top-main__contents__new-posts__content__body
+                バス用品
+              %td.top-main__contents__new-posts__content__body
+                バス用品
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                評価
+              %td.top-main__contents__new-posts__content__body
+                ★★
+              %td.top-main__contents__new-posts__content__body
+                ★★
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                参考価格
+              %td.top-main__contents__new-posts__content__body
+                1000円（税抜）
+              %td.top-main__contents__new-posts__content__body
+                1000円（税抜）
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                投稿者
+              %td.top-main__contents__new-posts__content__body
+                たっかむ
+              %td.top-main__contents__new-posts__content__body
+                たっかむ
+            %tr
+              %td.top-main__contents__new-posts__content__title
+                商品リンク
+              %td.top-main__contents__new-posts__content__body
+                = link_to  "#" do
+                  評価を見る
+              %td.top-main__contents__new-posts__content__body
+                = link_to  "#" do
+                  評価を見る
+    -# 人気ユーザー
+    .top-main__contents__users
+      .top-main__contents__users__title
+        人気のユーザー
+      .top-main__contents__users__content
+        = link_to  "#" do
+          .top-main__contents__users__content__user
+            .top-main__contents__users__content__user__image
+              = image_tag "wash.jpg", alt: "pic", class: 'image'
+            .top-main__contents__users__content__user__name
+              たっかむ
+            .top-main__contents__users__content__user__follower
+              = icon('fas', 'user')
+              324324
+        = link_to  "#" do
+          .top-main__contents__users__content__user
+            .top-main__contents__users__content__user__image
+              = image_tag "wash.jpg", alt: "pic", class: 'image'
+            .top-main__contents__users__content__user__name
+              たっかむ
+            .top-main__contents__users__content__user__follower
+              = icon('fas', 'user')
+              324324

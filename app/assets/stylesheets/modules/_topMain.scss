@@ -1,0 +1,106 @@
+.top-main {
+  max-width: 980px;
+  margin: 0 auto;
+  &__contents {
+    &__category {
+      margin-bottom: 4%;
+      &__title {
+        font-weight: bold;
+        font-size: xx-large;
+        margin-bottom: 1%;
+      }
+      &__content {
+        width: 100%;
+        & ul {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          & li {
+            padding: 2% 0;
+            .title {
+              color: $mainBlack;
+              text-align: center;
+              font-size: larger;
+            }
+          }
+        }
+      }
+    }
+    &__new-posts {
+      margin-bottom: 4%;
+      &__title {
+        font-weight: bold;
+        font-size: xx-large;
+        margin-bottom: 1%;
+      }
+      &__content {
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        &__head {
+          width: 100%;
+          font-weight: 300;      
+          & tr {
+            & td  {
+              border: 1px solid #E8E1E1;
+              padding: 1rem;
+              &.top-main__contents__new-posts__content__title {
+                line-height: 16px;
+                background-color: #F4F3F4;
+                color: #999;
+              }
+              &.top-main__contents__new-posts__content__body {
+                word-wrap: break-word;
+                width: 5rem;
+                font-size: small;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__users {
+      margin-bottom: 4%;
+      &__title {
+        font-weight: bold;
+        font-size: xx-large;
+        margin-bottom: 1%;
+      }
+      &__content {
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        &__user  {
+          color: $mainBlack;
+          width: 144px;
+          flex-shrink: 0;
+          border-radius: 16px;
+          border: 2px solid #F5F5F5;
+          box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
+          margin: 16px 8px;
+          text-align: center;
+          padding: 10px;
+          &__image {
+            .image {
+              width: 100%;
+              object-fit: contain;
+              border-radius: 50%;
+            }
+          }
+          &__name {
+            font-size: large;
+            font-weight: bold;
+          }
+          &__follower {
+            font-size: x-small;
+            color: #999;
+          }
+        } 
+      }
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
