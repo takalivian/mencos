@@ -52,14 +52,11 @@
           .sns-login {
           color: #fff;
           box-shadow: none;
-          margin-left: 1rem;
-          border-left: 1px solid #fff;
-          padding-left: 1rem;
           background-color: #d14836;
           border: none;
           border-radius: 5px;
           width: fit-content;
-          padding: 8px 40px;
+          padding: 8px 50px;
           text-align: center;
           font-size: larger;
           }
@@ -67,7 +64,7 @@
         &__login {
           font-size: 0.8rem;
           margin-top: 2rem;
-          text-align: end;
+          text-align: center;
           & a {
             color: $mainColor;
           }
