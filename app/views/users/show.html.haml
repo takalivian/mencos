@@ -10,7 +10,11 @@
           .user-show-wrapper__row__user-contents__right__top__name
             = current_user.name
           .user-show-wrapper__row__user-contents__right__top__follow
-            フォローする
+            - if @user.id == current_user.id
+              = link_to edit_user_path, class: "btn-edit" do
+                = icon('fas', 'cog')
+            - else 
+              フォローする
         .user-show-wrapper__row__user-contents__right__data
           .user-show-wrapper__row__user-contents__right__data__age
             25歳/
@@ -24,6 +28,7 @@
             YouTuberです！
             良いところと悪いところ両方書いていきます！
             過去の正直レビューは動画で！
+    -# クチコミ
     .user-show-wrapper__row__post-contents
       .user-show-wrapper__row__post-contents__header
         クチコミ一覧

@@ -65,10 +65,12 @@
         font-weight: 400;
         width: fit-content;
         border-bottom: 2px solid $mainColor;
-    
       }
       &__items {
-
+        width: initial;
+        padding: 10%;
+        background-color: gray;
+        margin-top: 2%;
       }
     }
   }
