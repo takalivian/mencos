@@ -5,6 +5,8 @@
         Men's Cosmetic
     .header__content__left
       .header__content__left__user
+        - if user_signed_in?
+          = link_to 'ログアウト', destroy_user_session_path, class: "headerContent__rightBox--items", method: :delete  
         = link_to 'マイページ', "#",  class: "btn-user"
       .header__content__left__post
         = link_to '投稿', "#",  class: "btn-post"
