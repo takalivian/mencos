@@ -29,9 +29,11 @@
           .actions
             = f.submit "登録する", class: "form-btn", id: "submit1"
       .account-new-page__low__contents__right
-        .account-new-page__low__contents__right__google
-          = icon('fab', 'google')
-          = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "sns-login"
+        .account-new-page__low__contents__right__sns
+          = link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "sns-login" do
+            = icon('fab', 'google')
+            |
+            Googleでログイン
         .account-new-page__low__contents__right__login
           アカウントをお持ちの方は
           %a(href="sign_in") こちら
