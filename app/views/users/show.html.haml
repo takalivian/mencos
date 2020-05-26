@@ -5,4 +5,17 @@
       .user-show-wrapper__row__user-contents__left
         = image_tag "silhouette.png", alt: "pic", class: 'user-image'
       .user-show-wrapper__row__user-contents__right
+        .user-show-wrapper__row__user-contents__right__top
+          .user-show-wrapper__row__user-contents__right__top__name
+            = current_user.name
+          .user-show-wrapper__row__user-contents__right__top__follow
+            フォローする
+        .user-show-wrapper__row__user-contents__right__data
+          .user-show-wrapper__row__user-contents__right__data__age
+            25歳/
+        .user-show-wrapper__row__user-contents__right__count
+          .user-show-wrapper__row__user-contents__right__count__follow
+            9フォロー
+          .user-show-wrapper__row__user-contents__right__count__follower
+            451345フォロワー
 = render "posts/footer"

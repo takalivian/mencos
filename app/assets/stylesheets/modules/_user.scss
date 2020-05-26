@@ -20,7 +20,38 @@
         }
       }
       &__right {
+        padding: 5% 0;
+        width: 60%;
+        &__top {
+          display: flex;
+          justify-content: space-between;
+          &__name {
+            font-size: 28px;
+          }
+          &__follow {
+            margin: auto 0;
+          }
+        }
+        &__data {
+          font-size: 1rem;
+          letter-spacing: 0.4px;
+          color: #999;
+          font-weight: 300;
+          &__age {
 
+          }
+        }
+        &__count {
+          padding: 3% 0;
+          display: flex;
+          font-size: medium;
+          &__follow {
+            margin-right: 1rem;
+          }
+          &__follower {
+
+          }
+        }
       }
     }
   }
