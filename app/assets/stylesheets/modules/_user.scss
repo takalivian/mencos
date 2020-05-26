@@ -7,6 +7,7 @@
     margin: 0 0 32px;
     &__user-contents {
       display: flex;
+      border-bottom: 1px solid #e7e7e7;
       &__left {
         height: 13rem;
         width: 13rem;
@@ -26,7 +27,7 @@
           display: flex;
           justify-content: space-between;
           &__name {
-            font-size: 28px;
+            font-size: 30px;
           }
           &__follow {
             margin: auto 0;
@@ -44,14 +45,30 @@
         &__count {
           padding: 3% 0;
           display: flex;
-          font-size: medium;
+          font-size: 18px;
           &__follow {
             margin-right: 1rem;
           }
           &__follower {
-
           }
         }
+      }
+    }
+    &__post-contents {
+      &__header {
+        font-size: 13px;
+        margin: auto;
+        padding: 1rem;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        color: #2D2926;
+        font-weight: 400;
+        width: fit-content;
+        border-bottom: 2px solid $mainColor;
+    
+      }
+      &__items {
+
       }
     }
   }
