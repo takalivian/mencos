@@ -27,9 +27,11 @@
               %br/
               = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "もう一度入力して下さい", class: "form-text"
           .actions
-            = f.submit "Sign up", class: "form-btn"
+            = f.submit "登録する", class: "form-btn"
       .account-new-page__low__contents__right
-        = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post
+        .account-new-page__low__contents__right__google
+          = icon('fab', 'google')
+          = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "sns-login"
 
 
 -# %p

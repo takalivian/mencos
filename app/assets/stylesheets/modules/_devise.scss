@@ -44,6 +44,22 @@
         }
       }
       &__right {
+        &__google {
+          background-color: #d14836;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          height: 1.5rem;
+          width: fit-content;
+          padding: 8px 16px;
+          .sns-login {
+            color: #fff;
+            box-shadow: none;
+            margin-left: 1rem;
+            border-left: 1px solid #fff;
+            padding-left: 1rem;
+          }
+        }
       }
     }
   }
