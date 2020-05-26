@@ -1,0 +1,22 @@
+.account-new-page {
+  height: calc(100vh - 11.5rem);
+  width: 100vw;
+  &__low {
+    background-color: gainsboro;
+    width: fit-content;
+    margin: auto;
+    padding: 5%;
+    &__title {
+      font-size: x-large;
+    }
+    &__contents {
+      display: flex;
+      &__left {
+
+      }
+      &__right {
+
+      }
+    }
+  }
+}
