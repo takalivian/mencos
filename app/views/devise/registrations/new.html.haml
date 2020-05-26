@@ -10,22 +10,22 @@
           .field
             = f.label :ニックネーム
             %br/
-            = f.text_field :name, autofocus: true, autocomplete: "name", class: "form-text"
+            = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ニックネーム", class: "form-text"
           .field
             = f.label :メールアドレス
             %br/
-            = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-text"
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form-text"
           - if @sns_id.present?
             = hidden_field_tag :sns_auth, true
           - else
             .field
               = f.label :パスワード
               %br/
-              = f.password_field :password, autocomplete: "new-password", class: "form-text"
+              = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード", class: "form-text"
             .field
               = f.label :もう一度入力して下さい
               %br/
-              = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-text"
+              = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "もう一度入力して下さい", class: "form-text"
           .actions
             = f.submit "Sign up", class: "form-btn"
       .account-new-page__low__contents__right
