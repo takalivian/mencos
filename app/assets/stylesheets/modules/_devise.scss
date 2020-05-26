@@ -34,11 +34,16 @@
           margin-top: 3rem;
           .form-btn {
             width: 100%;
-            border: 0.5px solid #988D8D;
-            border-radius: 2px;
+            background-color: $mainColor;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
             box-shadow: none;
             font-size: 14px;
             padding: 8px 16px;
+            font-weight: bold;
+            font-size: large;
+            cursor: pointer;
           }
         }
       }

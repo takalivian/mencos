@@ -27,7 +27,7 @@
               %br/
               = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "もう一度入力して下さい", class: "form-text"
           .actions
-            = f.submit "登録する", class: "form-btn"
+            = f.submit "登録する", class: "form-btn", id: "submit1"
       .account-new-page__low__contents__right
         .account-new-page__low__contents__right__google
           = icon('fab', 'google')
@@ -36,8 +36,4 @@
           アカウントをお持ちの方は
           %a(href="sign_in") こちら
           からログイン
--# %p
--#   %input#input1{:autocomplete => "off", :type => "text"}/
--#   %input#submit1{:type => "submit", :value => "送信"}/
-
 = render "posts/footer"
