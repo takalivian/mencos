@@ -1,0 +1,30 @@
+= render "posts/header"
+.account-new-page
+  .account-new-page__low
+    .account-new-page__low__title
+      ログイン
+    .account-new-page__low__contents
+      .account-new-page__low__contents__left
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          .field
+            = f.label :メールアドレス
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form-text"
+          .field
+            = f.label :パスワード
+            %br/
+            = f.password_field :password, autocomplete: "current-password", placeholder: "パスワード", class: "form-text"
+          .actions
+            = f.submit "ログイン", class: "form-btn", id: "submit1"
+      .account-new-page__low__contents__right
+        .account-new-page__low__contents__right__sns
+          = link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "sns-login" do
+            = icon('fab', 'google')
+            |
+            Googleでログイン
+        .account-new-page__low__contents__right__login
+          アカウントをお持ちで無い方は
+          %a(href="sign_up") こちら
+          から新規登録
+= render "posts/footer"

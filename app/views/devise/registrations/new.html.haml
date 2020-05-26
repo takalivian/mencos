@@ -1,0 +1,41 @@
+= render "posts/header"
+.account-new-page
+  .account-new-page__low
+    .account-new-page__low__title
+      新規登録
+    .account-new-page__low__contents
+      .account-new-page__low__contents__left
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = render "devise/shared/error_messages", resource: resource
+          .field
+            = f.label :ニックネーム
+            %br/
+            = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ニックネーム", class: "form-text"
+          .field
+            = f.label :メールアドレス
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "form-text"
+          - if @sns_id.present?
+            = hidden_field_tag :sns_auth, true
+          - else
+            .field
+              = f.label :パスワード
+              %br/
+              = f.password_field :password, autocomplete: "new-password", placeholder: "パスワード", class: "form-text"
+            .field
+              = f.label :もう一度入力して下さい
+              %br/
+              = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "もう一度入力して下さい", class: "form-text"
+          .actions
+            = f.submit "登録する", class: "form-btn", id: "submit1"
+      .account-new-page__low__contents__right
+        .account-new-page__low__contents__right__sns
+          = link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: "sns-login" do
+            = icon('fab', 'google')
+            |
+            Googleでログイン
+        .account-new-page__low__contents__right__login
+          アカウントをお持ちの方は
+          %a(href="sign_in") こちら
+          からログイン
+= render "posts/footer"
