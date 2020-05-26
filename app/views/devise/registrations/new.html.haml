@@ -32,8 +32,10 @@
         .account-new-page__low__contents__right__google
           = icon('fab', 'google')
           = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "sns-login"
-
-
+        .account-new-page__low__contents__right__login
+          アカウントをお持ちの方は
+          %a(href="sign_in") こちら
+          からログイン
 -# %p
 -#   %input#input1{:autocomplete => "off", :type => "text"}/
 -#   %input#submit1{:type => "submit", :value => "送信"}/
