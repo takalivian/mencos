@@ -7,6 +7,7 @@
       .header__content__left__user
         - if user_signed_in?
           = link_to 'ログアウト', destroy_user_session_path, class: "headerContent__rightBox--items", method: :delete  
-        = link_to 'マイページ', "#",  class: "btn-user"
+        = link_to user_path(current_user),  class: "btn-user" do
+          = current_user.name
       .header__content__left__post
         = link_to '投稿', "#",  class: "btn-post"
