@@ -1,0 +1,27 @@
+.user-show-wrapper {
+  width: 980px;
+  margin: 0 auto;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  &__row {
+    margin: 0 0 32px;
+    &__user-contents {
+      display: flex;
+      &__left {
+        height: 13rem;
+        width: 13rem;
+        padding: 5%;
+        .user-image {
+          height: 80%;
+          width: 80%;
+          border-radius: 50%;
+          border: 0.5px solid #DCD4D4;
+          padding: 10%;
+        }
+      }
+      &__right {
+
+      }
+    }
+  }
+}
