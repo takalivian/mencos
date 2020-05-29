@@ -4,7 +4,10 @@
   .user-show-wrapper__row
     .user-show-wrapper__row__user-contents
       .user-show-wrapper__row__user-contents__left
-        = image_tag "silhouette.png", alt: "pic", class: 'user-image'
+        - if @user.image.present?
+          = image_tag @user.image.url, class: 'user-image'
+        - else
+          = image_tag "silhouette.png", alt: "pic", class: 'user-image'
       .user-show-wrapper__row__user-contents__right
         .user-show-wrapper__row__user-contents__right__top
           .user-show-wrapper__row__user-contents__right__top__name
