@@ -78,13 +78,13 @@
 }
 // ユーザー編集
 .edit-user {
-  width: 980px;
+  width: 700px;
   margin: 0 auto;
   margin-top: 56px;
   margin-bottom: 56px;
-  background-color: gray;
   &__row {
     width: 100%;
     height: 100%;
+    // background-color: gray;
   }
 }

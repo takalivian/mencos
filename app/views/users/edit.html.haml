@@ -1,5 +1,72 @@
 = render "posts/header"
 .edit-user
-  .edit-user__row
-    .field-image
+  = form_with(model: @user, local: true) do |f|
+    .edit-user__row
+      .field-image
+        = f.label :画像
+        = f.label :image, class: 'image' do
+          - if @user.image.present?
+            .image-text
+              = image_tag "#{(@user.image).to_s}", width: "112", height: "112", alt: "preview", id: :img_prev_edit, class: "image-btn"
+              = f.file_field :image
+              .mask
+                .caption
+                  画像を選択して下さい
+          - else
+            .image-text
+              = image_tag "silhouette.png", width: "130", height: "130", alt: "preview", id: :img_prev_edit, class: "image-btn"
+              = f.file_field :image
+      .field
+        = f.label :ニックネーム
+        %br/
+        = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ニックネーム", class: "form-text"
+      .field
+        = f.label :年代
+        %br/
+        = f.number_field :age, min: 0, max: 120, autofocus: true, autocomplete: "age", class: 'age-text'
+      .field
+        = f.label :髪質
+        %br/
+        .validate-button
+          = f.radio_button :hair_quality, '硬い', { id: 'valid' }
+          = f.label '硬い', for: 'valid'
+          = f.radio_button :hair_quality, '普通', { id: 'invalid' }
+          = f.label '普通', for: 'invalid'
+          = f.radio_button :hair_quality, '柔らかい', { id: 'invalid2' }
+          = f.label '柔らかい', for: 'invalid2'
+      .field
+        = f.label :髪の長さ
+        %br/
+        .validate-button
+          = f.radio_button :hair_length, 'ボウズ', { id: 'valid' }
+          = f.label 'ボウズ', for: 'valid'
+          = f.radio_button :hair_length, 'ショート', { id: 'invalid' }
+          = f.label 'ショート', for: 'invalid'
+          = f.radio_button :hair_length, 'ミディアム', { id: 'invalid2' }
+          = f.label 'ミディアム', for: 'invalid2'
+          = f.radio_button :hair_length, 'ロング', { id: 'invalid3' }
+          = f.label 'ロング', for: 'invalid3'
+      .field
+        = f.label :肌質
+        %br/
+        .validate-button
+          = f.radio_button :skin_quality, '敏感肌', { id: 'valid' }
+          = f.label '敏感肌', for: 'valid'
+          = f.radio_button :skin_quality, '乾燥肌', { id: 'invalid' }
+          = f.label '乾燥肌', for: 'invalid'
+          = f.radio_button :skin_quality, '混合肌', { id: 'invalid2' }
+          = f.label '混合肌', for: 'invalid2'
+      .field
+        = f.label :髭の濃さ
+        %br/
+        .validate-button
+          = f.radio_button :beard, '濃い', { id: 'valid' }
+          = f.label '濃い', for: 'valid'
+          = f.radio_button :beard, '薄い', { id: 'invalid' }
+          = f.label '薄い', for: 'invalid'
+      .field
+        = f.label :自己紹介文
+        %br/
+        = f.text_area :remark, autofocus: true, autocomplete: "remark", placeholder: "好きなコスメなどを記入しましょう", class: "form-text"
+
 = render "posts/footer"
