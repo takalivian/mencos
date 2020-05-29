@@ -26,7 +26,7 @@
       .field
         = f.label :年代
         %br/
-        = f.text_field :age, autofocus: true, autocomplete: "age", class: 'age-text'
+        = f.collection_select :area, Agehash.all, :id, :name, prompt: "選択してください"
       .field
         = f.label :髪質
         %br/
