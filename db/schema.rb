@@ -62,10 +62,11 @@ ActiveRecord::Schema.define(version: 2020_05_26_061608) do
     t.string "encrypted_password", default: "", null: false
     t.string "image"
     t.string "name"
-    t.integer "age"
+    t.string "age"
     t.string "hair_quality"
     t.string "hair_length"
     t.string "skin_quality"
+    t.string "beard"
     t.text "remark"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
