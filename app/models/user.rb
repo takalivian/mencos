@@ -21,4 +21,7 @@ class User < ApplicationRecord
     end
     { user: user, sns: sns }
   end
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :agehash
 end
