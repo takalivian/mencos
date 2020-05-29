@@ -3,7 +3,7 @@
   = form_with(model: @user, local: true) do |f|
     .edit-user__row
       .field-image
-        = f.label :画像
+        = f.label :プロフィール画像
         = f.label :image, class: 'image' do
           - if @user.image.present?
             .image-text
@@ -16,6 +16,9 @@
             .image-text
               = image_tag "silhouette.png", width: "130", height: "130", alt: "preview", id: :img_prev_edit, class: "image-btn"
               = f.file_field :image
+              .mask
+                .caption
+                  画像を選択して下さい
       .field
         = f.label :ニックネーム
         %br/
