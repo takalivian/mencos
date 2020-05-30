@@ -120,5 +120,13 @@
         opacity: 1;
       }
     }
+    .field {
+      .form-text {
+        padding: 10px 20px;
+        border: 1px #ccc solid;
+        border-radius: 4px;
+        background-color: #fbfbfb;
+      }
+    }
   }
 }
