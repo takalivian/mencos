@@ -26,7 +26,7 @@
       .field
         = f.label :年代
         %br/
-        = f.collection_select :area, Agehash.all, :id, :name, prompt: "選択してください"
+        = f.collection_select :age, Agehash.all, :id, :name, prompt: "選択してください"
       .field
         = f.label :髪質
         %br/
