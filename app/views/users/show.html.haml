@@ -11,7 +11,7 @@
       .user-show-wrapper__row__user-contents__right
         .user-show-wrapper__row__user-contents__right__top
           .user-show-wrapper__row__user-contents__right__top__name
-            = current_user.name
+            = @user.name
           .user-show-wrapper__row__user-contents__right__top__follow
             - if @user.id == current_user.id
               = link_to edit_user_path, class: "btn-edit" do
@@ -20,7 +20,23 @@
               フォローする
         .user-show-wrapper__row__user-contents__right__data
           .user-show-wrapper__row__user-contents__right__data__age
-            25歳/
+            - unless @user_age.blank?
+              = @user_age.name
+              ／
+            - unless @user.hair_quality.blank? || @user.hair_length.blank?
+              髪
+              - unless @user.hair_quality.blank?
+                = @user.hair_quality
+              - unless @user.hair_length.blank?
+                = @user.hair_length
+              ／
+            - unless @user.skin_quality.blank?
+              = @user.skin_quality
+              ／
+            - unless @user.beard.blank?
+              髭
+              = @user.beard
+              ／
         .user-show-wrapper__row__user-contents__right__count
           .user-show-wrapper__row__user-contents__right__count__follow
             9フォロー
@@ -28,9 +44,8 @@
             451345フォロワー
         .user-show-wrapper__row__user-contents__right__info
           .user-show-wrapper__row__user-contents__right__info__text
-            YouTuberです！
-            良いところと悪いところ両方書いていきます！
-            過去の正直レビューは動画で！
+            - unless @user.remark.blank?
+              = @user.remark
     -# クチコミ
     .user-show-wrapper__row__post-contents
       .user-show-wrapper__row__post-contents__header
