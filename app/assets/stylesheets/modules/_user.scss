@@ -39,8 +39,7 @@
           letter-spacing: 0.4px;
           color: #999;
           font-weight: 300;
-          &__age {
-
+          &__text {
           }
         }
         &__count {
@@ -51,6 +50,11 @@
             margin-right: 1rem;
           }
           &__follower {
+          }
+        }
+        &__info {
+          &__text {
+            word-break: keep-all;
           }
         }
       }
