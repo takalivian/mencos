@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
 
+  mount_uploader :image, ImageUploader
+
   validates :name, presence: true, uniqueness: true
   
   def self.from_omniauth(auth)
@@ -21,4 +23,7 @@ class User < ApplicationRecord
     end
     { user: user, sns: sns }
   end
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :agehash
 end

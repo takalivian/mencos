@@ -1,0 +1,170 @@
+// ユーザー詳細
+.user-show-wrapper {
+  width: 980px;
+  margin: 0 auto;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  &__row {
+    margin: 0 0 32px;
+    &__user-contents {
+      display: flex;
+      border-bottom: 1px solid #e7e7e7;
+      &__left {
+        height: 13rem;
+        width: 13rem;
+        padding: 5%;
+        .user-image {
+          height: 80%;
+          width: 80%;
+          border-radius: 50%;
+          border: 0.5px solid #DCD4D4;
+          padding: 10%;
+        }
+      }
+      &__right {
+        padding: 5% 0;
+        width: 60%;
+        &__top {
+          display: flex;
+          justify-content: space-between;
+          &__name {
+            font-size: 30px;
+          }
+          &__follow {
+            margin: auto 0;
+          }
+        }
+        &__data {
+          font-size: 1rem;
+          letter-spacing: 0.4px;
+          color: #999;
+          font-weight: 300;
+          &__text {
+          }
+        }
+        &__count {
+          padding: 3% 0;
+          display: flex;
+          font-size: 18px;
+          &__follow {
+            margin-right: 1rem;
+          }
+          &__follower {
+          }
+        }
+        &__info {
+          &__text {
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+    &__post-contents {
+      &__header {
+        font-size: 13px;
+        margin: auto;
+        padding: 1rem;
+        line-height: 24px;
+        letter-spacing: 0.4px;
+        color: #2D2926;
+        font-weight: 400;
+        width: fit-content;
+        border-bottom: 2px solid $mainColor;
+      }
+      &__items {
+        width: initial;
+        padding: 10%;
+        background-color: gray;
+        margin-top: 2%;
+      }
+    }
+  }
+}
+// ユーザー編集
+.edit-user {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  &__row {
+    width: 100%;
+    height: 100%;
+    .field-image {
+      margin-bottom: 1%;
+      .image-text {
+        margin: auto;
+        width: fit-content;
+        position: relative;
+        .image-btn {
+          background-color: $mainColor;
+          border-radius: 50%;
+        }
+        & input{
+          display: none;
+        }
+      }
+      .image-text .caption {
+        font-size: 70%;
+        text-align: center;
+        line-height: 112px;
+        color: #fff;
+      }
+      .image-text .mask {
+        width: 100%;
+        height:	100%;
+        position:	absolute;
+        top: 0;
+        left:	0;
+        opacity: 0;
+        background-color:	rgba(0,0,0,0.4);
+        -webkit-transition:	all 0.2s ease;
+        transition:	all 0.2s ease;
+      }
+      .image-text:hover .mask {
+        opacity: 1;
+      }
+    }
+    .field {
+      .form-text {
+        padding: 10px 20px;
+        border: 1px #ccc solid;
+        border-radius: 4px;
+        background-color: #fbfbfb;
+      }
+      & select {
+        width: 32.5%;
+        padding: 20px;
+        border: 1px #ccc solid;
+        border-radius: 4px;
+        height: 47px;
+        background-color: #fbfbfb;
+      }
+      .form-area {
+        padding: 10px 20px;
+        border: 1px #ccc solid;
+        border-radius: 4px;
+        background-color: #fbfbfb;
+        width: 100%;
+      }
+    }
+    .field__submit {
+      margin-top: 5%;
+      .form-btn {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        line-height: 40px;
+        letter-spacing: 1.5px;
+        color: #fff;
+        font-weight: 500;
+        text-align: center;
+        background: $mainColor;
+        height: 40px;
+        border-radius: 5px;
+        display: block;
+        margin: auto;
+        width: 32.5%;
+      }
+    }
+  }
+}

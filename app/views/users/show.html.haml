@@ -1,0 +1,54 @@
+= render "posts/header"
+-# ユーザー情報
+.user-show-wrapper
+  .user-show-wrapper__row
+    .user-show-wrapper__row__user-contents
+      .user-show-wrapper__row__user-contents__left
+        - if @user.image.present?
+          = image_tag @user.image.url, class: 'user-image'
+        - else
+          = image_tag "silhouette.png", alt: "pic", class: 'user-image'
+      .user-show-wrapper__row__user-contents__right
+        .user-show-wrapper__row__user-contents__right__top
+          .user-show-wrapper__row__user-contents__right__top__name
+            = @user.name
+          .user-show-wrapper__row__user-contents__right__top__follow
+            - if @user.id == current_user.id
+              = link_to edit_user_path, class: "btn-edit" do
+                = icon('fas', 'cog')
+            - else 
+              フォローする
+        .user-show-wrapper__row__user-contents__right__data
+          .user-show-wrapper__row__user-contents__right__data__text
+            - unless @user_age.blank?
+              = @user_age.name
+              ／
+            - unless @user.hair_quality.blank? || @user.hair_length.blank?
+              髪
+              - unless @user.hair_quality.blank?
+                = @user.hair_quality
+              - unless @user.hair_length.blank?
+                = @user.hair_length
+              ／
+            - unless @user.skin_quality.blank?
+              = @user.skin_quality
+              ／
+            - unless @user.beard.blank?
+              髭
+              = @user.beard
+              ／
+        .user-show-wrapper__row__user-contents__right__count
+          .user-show-wrapper__row__user-contents__right__count__follow
+            9フォロー
+          .user-show-wrapper__row__user-contents__right__count__follower
+            451345フォロワー
+        .user-show-wrapper__row__user-contents__right__info
+          .user-show-wrapper__row__user-contents__right__info__text
+            - unless @user.remark.blank?
+              = @user.remark
+    -# クチコミ
+    .user-show-wrapper__row__post-contents
+      .user-show-wrapper__row__post-contents__header
+        クチコミ一覧
+      .user-show-wrapper__row__post-contents__items
+= render "posts/footer"

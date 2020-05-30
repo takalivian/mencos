@@ -9,10 +9,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.string  :image
       t.string  :name
-      t.integer :age
+      t.string  :age
       t.string  :hair_quality
       t.string  :hair_length
       t.string  :skin_quality
+      t.string  :beard
       t.text    :remark
 
       ## Recoverable
