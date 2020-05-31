@@ -1,2 +1,33 @@
 = render "header"
+.new-post-wrapper
+  .new-post-wrapper__main
+    .new-post-wrapper__main__title
+      %h1 クチコミの投稿
+    .new-post-wrapper__main__contents
+      = form_with(model: @post, local: true) do |f|
+        .form-image
+          .form-image__title
+            %label 出品画像
+            %span 必須
+            .form-image__text 最大10枚までアップロードできます
+            = f.fields_for :images do |image|
+              .clearfix
+                // 写真のプレビューとインプットボタンのul
+                %ul#previews
+                  %li.input
+                    // 画像を取り込むインプットボタン
+                    %label.upload-label
+                      .upload-label__text
+                        ドラッグアンドドロップ
+                        %br
+                        またはクリックしてファイルをアップロード
+                        .input-area
+                          = image.file_field :name, class: "hidden image_upload"
+        .new-post-wrapper__main__contents__name
+        .new-post-wrapper__main__contents__category
+        .new-post-wrapper__main__contents__brand
+        .new-post-wrapper__main__contents__shop
+        .new-post-wrapper__main__contents__price
+        .new-post-wrapper__main__contents__remark
+
 = render "footer"

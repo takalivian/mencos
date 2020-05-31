@@ -1,0 +1,24 @@
+.new-post-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 56px;
+  &__main {
+    max-width: 840px;
+    margin: 8px auto 0px;
+    &__title {
+      border-bottom: 0.5px solid $mainColor;
+      margin-bottom: 32px;
+      & h1 {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 29px;
+        color: #5F5354;
+        margin: 0px 40px 12px;
+      }
+    }
+    &__contents {
+      margin: 0px 40px 24px;
+    }
+  }
+}
