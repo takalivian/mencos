@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_05_26_061608) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.string "brand"
     t.integer "praice"
     t.string "shop"
     t.text "remark"
