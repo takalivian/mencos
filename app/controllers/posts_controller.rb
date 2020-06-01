@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @ppst = Post.new(post_params)
+    @post = Post.new(post_params)
     if @post.save
       redirect_to root_path
     else
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
       Category.where(ancestry: nil).each do |parent|
         @category_parent_array << parent.name
       end
-      render :new
+      redirect_to new_post_path
     end
   end
   
@@ -43,8 +43,10 @@ class PostsController < ApplicationController
     @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
 
-  def product_params
-    params.require(:product).permit(:name, :brand, :shop, :price, :remark, images_attributes: [:url])
+  private
+
+  def post_params
+    params.require(:post).permit(:name, :category_id, :brand, :shop, :praice, :remark, images_attributes: [:_destroy,:id,:url])
   end
 
 end

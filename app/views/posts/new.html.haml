@@ -35,11 +35,11 @@
           = f.text_field :shop, placeholder: "ショップ名" , rows: "40", class: 'text'
         .field
           %p 価格
-          = f.number_field :price, placeholder: "価格", min: 0, max: 999999, class: 'text'
+          = f.number_field :praice, placeholder: "価格", min: 0, max: 999999, class: 'text'
           円
         .field
           %p 商品説明
-          = f.text_area :price, placeholder: "商品説明", class: 'text-area'
+          = f.text_area :remark, placeholder: "商品説明", class: 'text-area'
         .field-submit
           = f.submit :出品する, class: 'post-btn'
 = render "footer"
