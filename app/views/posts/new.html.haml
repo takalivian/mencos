@@ -5,25 +5,35 @@
       %h1 クチコミの投稿
     .new-post-wrapper__main__contents
       = form_with(model: @post, local: true) do |f|
-        .new-post-wrapper__main__contents__image
+        .field
           .form-image
             .form-image__title
               %label 出品画像を追加
               .form-image__text 最大3枚までアップロードできます
               = f.fields_for :images do |image|
                 .clearfix
-                  // 写真のプレビューとインプットボタンのul
                   %ul#previews
                     %li.input
-                      // 画像を取り込むインプットボタン
                       %label.upload-label
                         .input-area
                           = image.file_field :name, class: "hidden image_upload"
-        .new-post-wrapper__main__contents__name
-        .new-post-wrapper__main__contents__category
-        .new-post-wrapper__main__contents__brand
-        .new-post-wrapper__main__contents__shop
-        .new-post-wrapper__main__contents__price
-        .new-post-wrapper__main__contents__remark
+        .field
+          %p 商品名
+          = f.text_field :name, placeholder: "タイトル 40文字以内" , rows: "40", class: 'title-box'
+        .field
+          %p カテゴリー
+          = f.text_field :category, placeholder: "カテゴリーを選択してください" , rows: "40", class: 'title-box'
+        .field
+          %p ブランド名
+          = f.text_field :brand, placeholder: "ブランド名" , rows: "40", class: 'title-box'
+        .field
+          %p ショップ名
+          = f.text_field :shop, placeholder: "ショップ名" , rows: "40", class: 'title-box'
+        .field
+          %p 価格
+          = f.number_field :price, placeholder: "価格", class: 'title-box'
+        .field
+          %p 商品説明
+          = f.text_area :price, placeholder: "商品説明", class: 'title-box'
 
 = render "footer"

@@ -19,6 +19,9 @@
     }
     &__contents {
       margin: 0px 40px 24px;
+      & .field {
+        margin-bottom: 2rem;
+      }
     }
   }
 }
