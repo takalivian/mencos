@@ -60,18 +60,22 @@
           height: 3rem;
           padding: 0 20px;
           border: 1px solid #ccc;
+          background-color: #fbfbfb;
         }
         .listing-select-wrapper__box--select {
           width: 56%;
           height: 3rem;
           padding: 0 20px;
           border: 1px solid #ccc;
+          background-color: #fbfbfb;
         }
         .text-area {
           width: 100%;
-          height: 4rem;
+          height: 6rem;
+          box-sizing: border-box;
           padding: 20px;
           border: 1px solid #ccc;
+          background-color: #fbfbfb;
         }
       }
       & .field-submit {
