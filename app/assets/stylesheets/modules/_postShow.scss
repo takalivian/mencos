@@ -22,6 +22,31 @@
       margin: 0px 40px 24px;
       & .field {
         margin-bottom: 2rem;
+        & #previews {
+          display: flex;
+        }
+        .clearfix {
+          height: 200px;
+          padding: 0px;
+          background-color: #F0EEEE;
+          border: 1px dashed #C7BCBC;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          line-height: 26px;
+          color: #5F5354;
+          text-align: center;
+          .preview {
+            height: 160px;
+            width: 160px;
+          }
+          .image-preview__wapper {
+            width: 240px;
+          }
+          .image_upload {
+            font-size: small;
+          }
+        }
         & p {
           height: 46px;
           line-height: 46px;
@@ -32,13 +57,13 @@
         }
         .text {
           width: 50%;
-          height: 2rem;
+          height: 3rem;
           padding: 0 20px;
           border: 1px solid #ccc;
         }
         .listing-select-wrapper__box--select {
           width: 56%;
-          height: 2rem;
+          height: 3rem;
           padding: 0 20px;
           border: 1px solid #ccc;
         }

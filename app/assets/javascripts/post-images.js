@@ -5,19 +5,19 @@ $(function(){
   $lis = $ul.find('.image-preview');
   $input = $ul.find('.input');
   if($input.length == 0){
-    if($lis.length <= 4 ){
+    if($lis.length <= 1 ){
       $ul.append(append_input)
       $('#previews .input').css({
         'width': `calc(100% - (20% * ${$lis.length}))`
       })
     }
-    else if($lis.length == 5 ){
-      $ul.append(append_input)
-      $('#previews .input').css({
-        'width': `100%`
-      })
-    }
-    else if($lis.length <= 9 ){
+    // else if($lis.length == 5 ){
+    //   $ul.append(append_input)
+    //   $('#previews .input').css({
+    //     'width': `100%`
+    //   })
+    // }
+    else if($lis.length <= 2 ){
       $ul.append(append_input)
       $('#previews .input').css({
         'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
@@ -69,28 +69,28 @@ $(function(){
       $li.addClass('image-preview'); // inputのクラスからプレビュー用のクラスに変更した
       $lis = $ul.find('.image-preview'); // クラス変更が完了したところで、プレビューの数を数える。 
       $('#previews li').css({
-        'width': `114px`
+        'width': `260px`
       })
 
 
 
 
       //"ul"に新しい"li(inputボタン)"を追加させる。
-      if($lis.length <= 4 ){
+      if($lis.length <= 1 ){
         $ul.append(append_input)
         $('#previews li:last-child').css({
           'width': `calc(100% - (20% * ${$lis.length}))`
         })
       }
-      else if($lis.length == 5 ){
-        $li.addClass('image-preview');
-        $ul.append(append_input)
-        $('#previews li:last-child').css({
-          'width': `100%`
-        })
-      }
+      // else if($lis.length == 5 ){
+      //   $li.addClass('image-preview');
+      //   $ul.append(append_input)
+      //   $('#previews li:last-child').css({
+      //     'width': `100%`
+      //   })
+      // }
       // ９個のプレビューのとき、1個のinputを追加。最後の数は9です。
-      else if($lis.length <= 9 ){
+      else if($lis.length <= 2 ){
         $li.addClass('image-preview');
         $ul.append(append_input)
         $('#previews li:last-child').css({
@@ -116,7 +116,7 @@ $(function(){
 
 //削除ボタンをクリックしたとき、処理が動く。
 $(document).on('click','.image-preview_btn_delete',function(){
-  var append_input = $(`<li class="input"><label class="upload-label"><div class="upload-label__text">ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード<div class="input-area"><input class="hidden image_upload" type="file"></div></div></label></li>`)
+  var append_input = $(`<li class="input"><label class="upload-label"><div class="input-area"><input class="hidden image_upload" type="file"></div></div></label></li>`)
   $ul = $('#previews')
   $lis = $ul.find('.image-preview');
   $input = $ul.find('.input');
@@ -131,25 +131,25 @@ $(document).on('click','.image-preview_btn_delete',function(){
   // まずはプレビューの数を数える。
   $lis = $ul.find('.image-preview');
   $label = $ul.find('.input');
-  if($lis.length <= 4 ){
+  if($lis.length <= 1 ){
     // inputのサイズを変更
     $('#previews li:last-child').css({
       'width': `calc(100% - (20% * ${$lis.length}))`
     })
   }
-  else if($lis.length == 5 ){
-    // inputのサイズを変更
-    $('#previews li:last-child').css({
-      'width': `100%`
-    })
-  }
-  else if($lis.length < 9 ){
+  // else if($lis.length == 5 ){
+  //   // inputのサイズを変更
+  //   $('#previews li:last-child').css({
+  //     'width': `100%`
+  //   })
+  // }
+  else if($lis.length < 2 ){
     // inputのサイズを変更
     $('#previews li:last-child').css({
       'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
     })
   }
-  else if($lis.length == 9 ){
+  else if($lis.length == 2 ){
     $ul.append(append_input) // 9個の時だけ、新しいinputを追加してやる
     $('#previews li:last-child').css({
       'width': `calc(100% - (20% * (${$lis.length} - 5 )))`
