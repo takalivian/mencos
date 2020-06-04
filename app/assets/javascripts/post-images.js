@@ -98,15 +98,15 @@ $(function(){
         })
       }
 
-      //inputの最後の"data-image"を取得して、input nameの番号を更新させてる。
+      //inputの最後の"data-image"を取得して、input urlの番号を更新させてる。
       // これをしないと、それぞれのinputの区別ができず、最後の1枚しかDBに保存されません。
       // 全部のプレビューの番号を更新することで、プレビューを削除して、新しく追加しても番号が1,2,3,4,5,6と綺麗に揃う。だから全部の番号を更新させる
       $inputs.each( function( num, input ){
-        //nameの番号を更新するために、現在の番号を除去
-        $(input).removeAttr('name');
+        //urlの番号を更新するために、現在の番号を除去
+        $(input).removeAttr('url');
         $(input).attr({
-          name:"product[images_attributes][" + num + "][name]",
-          id:"product_images_attributes_" + num + "_name"
+          name:"post[images_attributes][" + num + "][url]",
+          id:"post_images_attributes_" + num + "_url"
         });
       });
     })
