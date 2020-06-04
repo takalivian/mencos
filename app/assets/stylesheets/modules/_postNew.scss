@@ -1,0 +1,102 @@
+.new-post-wrapper {
+  max-width: 980px;
+  margin: 56px auto;
+  &__main {
+    max-width: 800px;
+    margin: 8px auto 0px;
+    &__title {
+      border-bottom: 0.5px solid $mainColor;
+      margin-bottom: 32px;
+      & h1 {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        line-height: 29px;
+        color: #5F5354;
+        margin: 0px 40px 12px;
+        font-weight: bold;
+      }
+    }
+    &__contents {
+      margin: 0px 40px 24px;
+      & .field {
+        margin-bottom: 2rem;
+        & #previews {
+          display: flex;
+        }
+        .clearfix {
+          height: 200px;
+          padding: 0px;
+          background-color: #F0EEEE;
+          border: 1px dashed #C7BCBC;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          line-height: 26px;
+          color: #5F5354;
+          text-align: center;
+          .preview {
+            height: 160px;
+            width: 160px;
+          }
+          .image-preview__wapper {
+            width: 240px;
+          }
+          .image_upload {
+            font-size: small;
+          }
+        }
+        & p {
+          height: 46px;
+          line-height: 46px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #5F5354;
+          margin: 0px;
+        }
+        .text {
+          width: 50%;
+          height: 3rem;
+          padding: 0 20px;
+          border: 1px solid #ccc;
+          background-color: #fbfbfb;
+        }
+        .listing-select-wrapper__box--select {
+          width: 56%;
+          height: 3rem;
+          padding: 0 20px;
+          border: 1px solid #ccc;
+          background-color: #fbfbfb;
+        }
+        .text-area {
+          width: 100%;
+          height: 6rem;
+          box-sizing: border-box;
+          padding: 20px;
+          border: 1px solid #ccc;
+          background-color: #fbfbfb;
+        }
+      }
+      & .field-submit {
+        .post-btn {
+          text-decoration: none;
+          color: #fff;
+          font-size: 15px;
+          line-height: 40px;
+          letter-spacing: 1.5px;
+          color: #fff;
+          font-weight: 500;
+          text-align: center;
+          background: $mainColor;
+          width: 360px;
+          height: 40px;
+          border-radius: 5px;
+          display: block;
+          margin: 0 auto;
+          width: 452px;
+          border: none;
+        }
+      }
+    }
+  }
+}
