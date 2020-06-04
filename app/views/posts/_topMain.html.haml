@@ -64,10 +64,9 @@
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品名
-              %td.top-main__contents__new-posts__content__body
-                パーフェクトクリアシャンプー
-              %td.top-main__contents__new-posts__content__body
-                パーフェクトクリアシャンプー
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = post.name
             %tr
               %td.top-main__contents__new-posts__content__title
                 カテゴリー
