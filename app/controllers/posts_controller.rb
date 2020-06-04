@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   def index
+    @posts = Post.order("created_at desc").limit(20)
   end
 
   def new
