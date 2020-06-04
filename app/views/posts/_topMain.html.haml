@@ -83,17 +83,16 @@
             %tr
               %td.top-main__contents__new-posts__content__title
                 参考価格
-              %td.top-main__contents__new-posts__content__body
-                1000円（税抜）
-              %td.top-main__contents__new-posts__content__body
-                1000円（税抜）
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = post.praice
+                  円（税抜）
             %tr
               %td.top-main__contents__new-posts__content__title
                 投稿者
-              %td.top-main__contents__new-posts__content__body
-                たっかむ
-              %td.top-main__contents__new-posts__content__body
-                たっかむ
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = post.user.name
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品リンク
