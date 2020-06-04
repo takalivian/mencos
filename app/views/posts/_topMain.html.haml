@@ -92,7 +92,8 @@
                 投稿者
               - @posts.each do |post|
                 %td.top-main__contents__new-posts__content__body
-                  = post.user.name
+                  = link_to  user_path(post.user.id) do
+                    = post.user.name
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品リンク
