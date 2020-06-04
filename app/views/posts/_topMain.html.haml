@@ -52,10 +52,9 @@
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品画像
-              %td
-                = image_tag "shampoo.jpg", width: "150", height: "150", alt: "pic", class: 'image'
-              %td
-                = image_tag "shampoo.jpg", width: "150", height: "150", alt: "pic", class: 'image'
+              - @posts.each do |post|
+                %td
+                  = image_tag post.images[0].url.url, width: "150", height: "150", alt: "pic", class: 'image'
             %tr
               %td.top-main__contents__new-posts__content__title
                 ブランド
