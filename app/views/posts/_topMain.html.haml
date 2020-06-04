@@ -96,12 +96,10 @@
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品リンク
-              %td.top-main__contents__new-posts__content__body
-                = link_to  "#" do
-                  評価を見る
-              %td.top-main__contents__new-posts__content__body
-                = link_to  "#" do
-                  評価を見る
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = link_to  post_path(post.id) do
+                    評価を見る
     -# 人気ユーザー
     .top-main__contents__users
       .top-main__contents__users__title
