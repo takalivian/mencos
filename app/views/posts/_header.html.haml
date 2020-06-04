@@ -10,4 +10,4 @@
           = link_to user_path(current_user),  class: "btn-user" do
             = current_user.name
       .header__content__left__post
-        = link_to '投稿', "#",  class: "btn-post"
+        = link_to '投稿', new_post_path,  class: "btn-post"

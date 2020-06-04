@@ -96,7 +96,8 @@
         width: fit-content;
         position: relative;
         .image-btn {
-          background-color: $mainColor;
+          border: 0.5px solid $mainColor;
+          // background-color: $mainColor;
           border-radius: 50%;
         }
         & input{
@@ -133,7 +134,7 @@
       }
       & select {
         width: 32.5%;
-        padding: 20px;
+        padding: 0 20px;
         border: 1px #ccc solid;
         border-radius: 4px;
         height: 47px;
@@ -164,6 +165,7 @@
         display: block;
         margin: auto;
         width: 32.5%;
+        border: none;
       }
     }
   }

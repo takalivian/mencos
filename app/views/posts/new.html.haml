@@ -1,0 +1,45 @@
+= render "header"
+.new-post-wrapper
+  .new-post-wrapper__main
+    .new-post-wrapper__main__title
+      %h1 クチコミの投稿
+    .new-post-wrapper__main__contents
+      = form_with(model: @post, local: true) do |f|
+        .field
+          .form-image
+            .form-image__title
+              %p 出品画像を追加
+              .form-image__text 最大3枚までアップロードできます
+              = f.fields_for :images do |image|
+                .clearfix
+                  %ul#previews
+                    %li.input
+                      %label.upload-label
+                        .input-area
+                          = image.file_field :url, class: "hidden image_upload"
+        .field
+          %p 商品名
+          = f.text_field :name, placeholder: "商品名" , rows: "40", class: 'text'
+        .field
+          .listing-form-box
+            .listing-product-detail__category
+              %p カテゴリー
+              .listing-select-wrapper
+                .listing-select-wrapper__box
+                  = f.select :category, @category_parent_array, {}, {class: 'listing-select-wrapper__box--select', id: 'parent_category'}
+        .field
+          %p ブランド名
+          = f.text_field :brand, placeholder: "ブランド名" , rows: "40", class: 'text'
+        .field
+          %p ショップ名
+          = f.text_field :shop, placeholder: "ショップ名" , rows: "40", class: 'text'
+        .field
+          %p 価格
+          = f.number_field :praice, placeholder: "価格", min: 0, max: 999999, class: 'text'
+          円
+        .field
+          %p 商品説明
+          = f.text_area :remark, placeholder: "商品説明", class: 'text-area'
+        .field-submit
+          = f.submit :出品する, class: 'post-btn'
+= render "footer"

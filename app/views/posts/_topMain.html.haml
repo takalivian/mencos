@@ -52,61 +52,55 @@
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品画像
-              %td
-                = image_tag "shampoo.jpg", width: "150", height: "150", alt: "pic", class: 'image'
-              %td
-                = image_tag "shampoo.jpg", width: "150", height: "150", alt: "pic", class: 'image'
+              - @posts.each do |post|
+                %td
+                  = image_tag post.images[0].url.url, width: "150", height: "150", alt: "pic", class: 'image'
             %tr
               %td.top-main__contents__new-posts__content__title
                 ブランド
-              %td.top-main__contents__new-posts__content__body
-                GATSBY
-              %td.top-main__contents__new-posts__content__body
-                GATSBY
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = post.brand
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品名
-              %td.top-main__contents__new-posts__content__body
-                パーフェクトクリアシャンプー
-              %td.top-main__contents__new-posts__content__body
-                パーフェクトクリアシャンプー
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = post.name
             %tr
               %td.top-main__contents__new-posts__content__title
                 カテゴリー
-              %td.top-main__contents__new-posts__content__body
-                バス用品
-              %td.top-main__contents__new-posts__content__body
-                バス用品
-            %tr
-              %td.top-main__contents__new-posts__content__title
-                評価
-              %td.top-main__contents__new-posts__content__body
-                ★★
-              %td.top-main__contents__new-posts__content__body
-                ★★
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = post.category.name
+            -# %tr
+            -#   %td.top-main__contents__new-posts__content__title
+            -#     評価
+            -#   %td.top-main__contents__new-posts__content__body
+            -#     ★★
+            -#   %td.top-main__contents__new-posts__content__body
+            -#     ★★
             %tr
               %td.top-main__contents__new-posts__content__title
                 参考価格
-              %td.top-main__contents__new-posts__content__body
-                1000円（税抜）
-              %td.top-main__contents__new-posts__content__body
-                1000円（税抜）
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = post.praice
+                  円（税抜）
             %tr
               %td.top-main__contents__new-posts__content__title
                 投稿者
-              %td.top-main__contents__new-posts__content__body
-                たっかむ
-              %td.top-main__contents__new-posts__content__body
-                たっかむ
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = link_to  user_path(post.user.id) do
+                    = post.user.name
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品リンク
-              %td.top-main__contents__new-posts__content__body
-                = link_to  "#" do
-                  評価を見る
-              %td.top-main__contents__new-posts__content__body
-                = link_to  "#" do
-                  評価を見る
+              - @posts.each do |post|
+                %td.top-main__contents__new-posts__content__body
+                  = link_to  post_path(post.id) do
+                    評価を見る
     -# 人気ユーザー
     .top-main__contents__users
       .top-main__contents__users__title
