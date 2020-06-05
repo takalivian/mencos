@@ -45,7 +45,7 @@
     .show-post-wrapper__main__comments
       .show-post-wrapper__main__comments__title
         コメント欄
-      - if @comments
+      - if @comments.present?
         - @comments.each do |comment|
           .show-post-wrapper__main__comments__main
             .show-post-wrapper__main__comments__main__content
@@ -56,6 +56,9 @@
                   = comment.user.name
               .show-post-wrapper__main__comments__main__sub__time
                 = comment.created_at.strftime("%Y/%m/%d")
+      - else
+        .show-post-wrapper__main__comments__no-main
+          まだコメントがありません。
       .show-post-wrapper__main__comments__submit
         = form_with(model: [@post, @comment], local: true) do |f|
           .show-post-wrapper__main__comments__submit__box
