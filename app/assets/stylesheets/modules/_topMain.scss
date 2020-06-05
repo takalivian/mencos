@@ -71,6 +71,9 @@
         width: 100%;
         display: flex;
         overflow: scroll;
+        .user {
+          display: flex;
+        }
         &__user  {
           color: $mainBlack;
           width: 144px;
@@ -82,7 +85,8 @@
           text-align: center;
           padding: 10px;
           &__image {
-            .image {
+            width: 100%;
+            .user-image {
               width: 100%;
               object-fit: contain;
               border-radius: 50%;
