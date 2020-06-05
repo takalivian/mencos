@@ -6,9 +6,12 @@
         = @post.brand
       .show-post-wrapper__main__title__name
         = @post.name
-    .show-post-wrapper__main__main
-    .show-post-wrapper__main__remark
-    .show-post-wrapper__main__comment
+    .show-post-wrapper__main__images
+      - @post.images.each do |i|
+        = image_tag ("#{i.url.url}"), class: "small-img"
+    .show-post-wrapper__main__info
+    .show-post-wrapper__main__remarks
+  .show-post-wrapper__comment
 
 
 = render "footer"

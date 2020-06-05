@@ -25,5 +25,12 @@
         font-weight: 500;
       }
     }
+    &__images {
+      display: flex;
+      width: 100%;
+      .small-img {
+        width: 33%;
+      }
+    }
   }
 }
