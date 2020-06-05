@@ -1,0 +1,12 @@
+.show-post-wrapper {
+  max-width: 980px;
+  margin: 56px auto;
+  &__main {
+    max-width: 800px;
+    margin: 8px auto 0px;
+    &__title {
+      border-bottom: 0.5px solid $mainColor;
+      margin-bottom: 32px;
+    }
+  }
+}
