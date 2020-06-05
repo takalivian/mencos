@@ -112,6 +112,43 @@
           letter-spacing: 0;
           color: #999;
           font-weight: 300;
+          .link-user {
+            color: #999;
+          }
+        }
+      }
+      &__submit {
+        &__box {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin: 24px 0 32px;
+          .comment-text {
+            width: 80%;
+            height: 84px;
+            padding: 12px 16px;
+            font-size: 14px;
+            letter-spacing: 0.4px;
+            font-weight: 300;
+            color: #2D2926;
+            border-radius: 4px;
+            border: 1px solid #e7e7e7;
+            resize: none;
+          }
+          .comment-btn {
+            width: 15%;
+            height: 40px;
+            background: $mainColor;
+            color: #fff;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.4px;
+            text-align: center;
+            font-weight: 400;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+          }
         }
       }
     }

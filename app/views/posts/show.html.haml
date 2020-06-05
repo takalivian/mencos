@@ -45,14 +45,23 @@
     .show-post-wrapper__main__comments
       .show-post-wrapper__main__comments__title
         コメント欄
-      .show-post-wrapper__main__comments__main
-        .show-post-wrapper__main__comments__main__content
-          いいですね！
-        .show-post-wrapper__main__comments__main__sub
-          .show-post-wrapper__main__comments__main__sub__user
-            高村
-          .show-post-wrapper__main__comments__main__sub__time
-            一時間前
+      - if @comments
+        - @comments.each do |comment|
+          .show-post-wrapper__main__comments__main
+            .show-post-wrapper__main__comments__main__content
+              = comment.text
+            .show-post-wrapper__main__comments__main__sub
+              .show-post-wrapper__main__comments__main__sub__user
+                = link_to  user_path(comment.user.id), class: "link-user" do
+                  = comment.user.name
+              .show-post-wrapper__main__comments__main__sub__time
+                = comment.created_at.strftime("%Y/%m/%d")
+      .show-post-wrapper__main__comments__submit
+        = form_with(model: [@post, @comment], local: true) do |f|
+          .show-post-wrapper__main__comments__submit__box
+            = f.text_area :text, placeholder: "コメントする", class: "comment-text" 
+            = f.submit "SEND", class: "comment-btn" 
+
 
 
 = render "footer"
