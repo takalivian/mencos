@@ -8,7 +8,8 @@
         = @post.name
     .show-post-wrapper__main__images
       - @post.images.each do |i|
-        = image_tag ("#{i.url.url}"), class: "small-img"
+        %a{"data-lightbox" => "abc", :href => "#{i.url.url}", class: "small-img"}
+          = image_tag ("#{i.url.url}"), class: "big-img"
     .show-post-wrapper__main__info
     .show-post-wrapper__main__user
       = link_to  user_path(@post.user.id), class: "link-user" do
