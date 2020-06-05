@@ -31,6 +31,8 @@ class PostsController < ApplicationController
     unless @post.user.age.blank?
       @user_age = Agehash.find(@post.user.age)
     end
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user)
   end
 
   def get_category_children
