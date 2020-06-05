@@ -36,6 +36,9 @@
             = @post.user.beard
             ／
           = @post.user.name
+      .show-post-wrapper__main__user__time
+        更新日時：
+        = @post.created_at.strftime("%Y/%m/%d")
     .show-post-wrapper__main__remarks
       = @post.remark
   .show-post-wrapper__comment
