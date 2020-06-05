@@ -27,9 +27,10 @@
     }
     &__images {
       display: flex;
+      justify-content: space-evenly;
       width: 100%;
       .small-img {
-        width: 33%;
+        width: 20%;
       }
     }
   }
