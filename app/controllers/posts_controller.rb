@@ -28,6 +28,10 @@ class PostsController < ApplicationController
   
   def show
     @post = Post.includes(:images).find(params[:id])
+    # @post.user = User.find(params[:id])
+    unless @post.user.age.blank?
+      @user_age = Agehash.find(@post.user.age)
+    end
   end
 
   def get_category_children

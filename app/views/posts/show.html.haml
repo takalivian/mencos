@@ -11,6 +11,32 @@
         = image_tag ("#{i.url.url}"), class: "small-img"
     .show-post-wrapper__main__info
     .show-post-wrapper__main__user
+      = link_to  user_path(@post.user.id), class: "link-user" do
+        .show-post-wrapper__main__user__image
+          -if @post.user.image?
+            = image_tag "#{@post.user.image.url}", class: "user-img"
+          - else
+            = image_tag "silhouette.png", class: "user-img" 
+        .show-post-wrapper__main__user__info
+          - unless @post.user.name.blank?
+            = @user_age.name
+            ／
+          - unless @post.user.hair_quality.blank? || @post.user.hair_length.blank?
+            髪
+          - unless @post.user.hair_quality.blank?
+            = @post.user.hair_quality
+          - unless @post.user.hair_length.blank?
+            = @post.user.hair_length
+            ／
+          - unless @post.user.skin_quality.blank?
+            = @post.user.skin_quality
+            ／
+          - unless @post.user.beard.blank?
+            髭
+            = @post.user.beard
+            ／
+          = @post.user.name
+
     .show-post-wrapper__main__remarks
   .show-post-wrapper__comment
 
