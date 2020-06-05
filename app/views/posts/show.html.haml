@@ -42,7 +42,9 @@
         = @post.created_at.strftime("%Y/%m/%d")
     .show-post-wrapper__main__remarks
       = @post.remark
-  .show-post-wrapper__comment
+    .show-post-wrapper__main__comment
+      .show-post-wrapper__main__comment__title
+        コメント欄
 
 
 = render "footer"
