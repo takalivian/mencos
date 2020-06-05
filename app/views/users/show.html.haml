@@ -24,7 +24,7 @@
               - else
                 = form_for(current_user.relationships.build) do |f|
                   = f.hidden_field :follow_id, value: @user.id
-                  = f.submit 'フォロー', class: 'follows'
+                  = f.submit 'フォローする', class: 'follows'
         .user-show-wrapper__row__user-contents__right__data
           .user-show-wrapper__row__user-contents__right__data__text
             - unless @user_age.blank?
@@ -46,9 +46,11 @@
               ／
         .user-show-wrapper__row__user-contents__right__count
           .user-show-wrapper__row__user-contents__right__count__follow
-            9フォロー
+            = @user.followings.count
+            フォロー
           .user-show-wrapper__row__user-contents__right__count__follower
-            451345フォロワー
+            = @user.followers.count
+            フォロワー
         .user-show-wrapper__row__user-contents__right__info
           .user-show-wrapper__row__user-contents__right__info__text
             - unless @user.remark.blank?

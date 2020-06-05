@@ -33,6 +33,34 @@
           &__follow {
             font-size: x-large;
             margin: auto 0;
+            .follows {
+              text-decoration: none;
+              color: $mainColor;
+              display: block;
+              font-size: 12px;
+              line-height: 16px;
+              letter-spacing: 0;
+              font-weight: 300;
+              padding: 8px;
+              border-radius: 4px;
+              background-color: #fff;
+              border: 1px solid $mainColor;
+              cursor: pointer;
+            }
+            .follow-now {
+              text-decoration: none;
+              color: #fff;
+              display: block;
+              font-size: 12px;
+              line-height: 16px;
+              letter-spacing: 0;
+              font-weight: 300;
+              padding: 8px;
+              border-radius: 4px;
+              background-color: $mainColor;
+              border: 1px solid $mainColor;
+              cursor: pointer;
+            }
           }
         }
         &__data {
