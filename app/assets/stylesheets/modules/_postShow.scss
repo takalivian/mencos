@@ -1,4 +1,4 @@
-.new-post-wrapper {
+.show-post-wrapper {
   max-width: 980px;
   margin: 56px auto;
   &__main {
@@ -7,95 +7,179 @@
     &__title {
       border-bottom: 0.5px solid $mainColor;
       margin-bottom: 32px;
-      & h1 {
+      &__brand {
+        color: #666;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 300;
+      }
+      &__name {
         font-size: 20px;
-        font-weight: 400;
-        letter-spacing: 1px;
-        line-height: 29px;
-        color: #5F5354;
-        margin: 0px 40px 12px;
-        font-weight: bold;
+        line-height: 32px;
+        letter-spacing: 0.8px;
+        color: #2D2926;
+        margin: 0 0 20px;
+        font-weight: 500;
       }
     }
-    &__contents {
-      margin: 0px 40px 24px;
-      & .field {
-        margin-bottom: 2rem;
-        & #previews {
-          display: flex;
-        }
-        .clearfix {
-          height: 200px;
-          padding: 0px;
-          background-color: #F0EEEE;
-          border: 1px dashed #C7BCBC;
-          font-size: 14px;
-          font-weight: 400;
-          letter-spacing: 1px;
-          line-height: 26px;
-          color: #5F5354;
-          text-align: center;
-          .preview {
-            height: 160px;
-            width: 160px;
-          }
-          .image-preview__wapper {
-            width: 240px;
-          }
-          .image_upload {
-            font-size: small;
-          }
-        }
-        & p {
-          height: 46px;
-          line-height: 46px;
-          font-size: 14px;
-          font-weight: bold;
-          color: #5F5354;
-          margin: 0px;
-        }
-        .text {
-          width: 50%;
-          height: 3rem;
-          padding: 0 20px;
-          border: 1px solid #ccc;
-          background-color: #fbfbfb;
-        }
-        .listing-select-wrapper__box--select {
-          width: 56%;
-          height: 3rem;
-          padding: 0 20px;
-          border: 1px solid #ccc;
-          background-color: #fbfbfb;
-        }
-        .text-area {
-          width: 100%;
-          height: 6rem;
-          box-sizing: border-box;
-          padding: 20px;
-          border: 1px solid #ccc;
-          background-color: #fbfbfb;
+    &__images {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-bottom: 32px;
+      .small-img {
+        width: 20%;
+        position: relative;
+      }
+      .big-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      & p {
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        color: #000;
+        font-size: x-large;
+      }
+    }
+    &__user {
+      width: 100%;
+      height: 32px;
+      border-bottom: 1px solid #e7e7e7;
+      padding: 0.3rem 0;
+      font-size: small;
+      display: flex;
+      justify-content: space-between;
+      .link-user {
+        display: flex;
+        align-items: center;
+        color: #999;
+        width: fit-content;
+      }
+      &__image {
+        margin-right: 1rem;
+        height: 32px;
+        .user-img {
+          width: 30px;
+          border-radius: 50%;
+          border: 0.5px solid #DCD4D4;
         }
       }
-      & .field-submit {
-        .post-btn {
-          text-decoration: none;
-          color: #fff;
-          font-size: 15px;
-          line-height: 40px;
-          letter-spacing: 1.5px;
-          color: #fff;
-          font-weight: 500;
-          text-align: center;
-          background: $mainColor;
-          width: 360px;
-          height: 40px;
-          border-radius: 5px;
-          display: block;
-          margin: 0 auto;
-          width: 452px;
-          border: none;
+      &__info {
+        display: flex;
+        width: 100%;
+      }
+      &__time {
+        align-items: center;
+        line-height: 32px;
+      }
+    }
+    &__remarks {
+      padding: 2rem 3rem;
+      white-space: pre-line;
+      font-size: medium;
+      line-height: 26px;
+      letter-spacing: 0.8px;
+      color: #2D2926;
+      font-weight: 300;
+      border-bottom: 1px solid #e7e7e7;
+      margin-bottom: 32px;
+    }
+    &__comments {
+      &__title {
+        border-left: 3px solid $mainColor;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.8px;
+        color: #2D2926;
+        padding-left: 16px;
+        margin: 16px 0 24px;
+        font-weight: 500;
+      }
+      &__main {
+        color: #2D2926;
+        padding: 16px;
+        &__content {
+          font-size: medium;
+          line-height: 20px;
+          letter-spacing: 0.4px;
+          color: #2D2926;
+          font-weight: 400;
+          margin: 0 0 12px;
         }
+        &__sub {
+          display: flex;
+          justify-content: space-between;
+          font-size: small;
+          line-height: 16px;
+          letter-spacing: 0;
+          color: #999;
+          font-weight: 300;
+          .link-user {
+            color: #999;
+          }
+        }
+      }
+      &__no-main {
+        font-size: small;
+      }
+      &__submit {
+        margin-bottom: 6rem;
+        &__box {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-top: 24px;
+          .comment-text {
+            width: 80%;
+            height: 84px;
+            padding: 12px 16px;
+            font-size: 14px;
+            letter-spacing: 0.4px;
+            font-weight: 300;
+            color: #2D2926;
+            border-radius: 4px;
+            border: 1px solid #e7e7e7;
+            resize: none;
+          }
+          .comment-btn {
+            width: 15%;
+            height: 40px;
+            background: $mainColor;
+            color: #fff;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.4px;
+            text-align: center;
+            font-weight: 400;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &__return-home {
+      text-align: center;
+      margin-top: 2%;
+      .btn-home{
+        display: block;
+        box-sizing: border-box;
+        width: 12rem;
+        height: 2rem;
+        line-height: 2rem;
+        margin: 0 auto;
+        background-color: $mainColor;
+        border-radius: 1rem;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
       }
     }
   }

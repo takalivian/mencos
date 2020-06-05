@@ -2,10 +2,13 @@
 @import "config/variable";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+// post
 @import "modules/topHeader";
 @import "modules/topContent";
 @import "modules/topMain";
 @import "modules/topFooter";
+@import "modules/postNew";
 @import "modules/postShow";
+// user
 @import "modules/devise";
 @import "modules/user";

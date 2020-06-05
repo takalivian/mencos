@@ -1,0 +1,81 @@
+= render "header"
+.show-post-wrapper
+  .show-post-wrapper__main
+    .show-post-wrapper__main__title
+      .show-post-wrapper__main__title__brand
+        = @post.brand
+      .show-post-wrapper__main__title__name
+        = @post.name
+    .show-post-wrapper__main__images
+      - @post.images.each do |i|
+        %a{"data-lightbox" => "abc", :href => "#{i.url.url}", class: "small-img"}
+          = image_tag ("#{i.url.url}"), class: "big-img"
+          %p
+            = icon('fas', 'expand')
+    .show-post-wrapper__main__info
+      カテゴリー：
+      = @post.category.name
+      ／
+      買ったお店：
+      = @post.shop
+      ／
+      参考価格：
+      = @post.praice
+      円
+    .show-post-wrapper__main__user
+      = link_to  user_path(@post.user.id), class: "link-user" do
+        .show-post-wrapper__main__user__image
+          -if @post.user.image?
+            = image_tag "#{@post.user.image.url}", class: "user-img"
+          - else
+            = image_tag "silhouette.png", class: "user-img" 
+        .show-post-wrapper__main__user__info
+          - unless @post.user.name.blank?
+            = @user_age.name
+            ／
+          - unless @post.user.hair_quality.blank? || @post.user.hair_length.blank?
+            髪
+          - unless @post.user.hair_quality.blank?
+            = @post.user.hair_quality
+          - unless @post.user.hair_length.blank?
+            = @post.user.hair_length
+            ／
+          - unless @post.user.skin_quality.blank?
+            = @post.user.skin_quality
+            ／
+          - unless @post.user.beard.blank?
+            髭
+            = @post.user.beard
+            ／
+          = @post.user.name
+      .show-post-wrapper__main__user__time
+        更新日時：
+        = @post.created_at.strftime("%Y/%m/%d")
+    .show-post-wrapper__main__remarks
+      = @post.remark
+    .show-post-wrapper__main__comments
+      .show-post-wrapper__main__comments__title
+        コメント欄
+      - if @comments.present?
+        - @comments.each do |comment|
+          .show-post-wrapper__main__comments__main
+            .show-post-wrapper__main__comments__main__content
+              = comment.text
+            .show-post-wrapper__main__comments__main__sub
+              .show-post-wrapper__main__comments__main__sub__user
+                = link_to  user_path(comment.user.id), class: "link-user" do
+                  = comment.user.name
+              .show-post-wrapper__main__comments__main__sub__time
+                = comment.created_at.strftime("%Y/%m/%d")
+      - else
+        .show-post-wrapper__main__comments__no-main
+          まだコメントがありません。
+      .show-post-wrapper__main__comments__submit
+        = form_with(model: [@post, @comment], local: true) do |f|
+          .show-post-wrapper__main__comments__submit__box
+            = f.text_area :text, placeholder: "コメントする", class: "comment-text" 
+            = f.submit "SEND", class: "comment-btn" 
+    .show-post-wrapper__main__return-home
+      = link_to "/", class: "btn-home" do
+        トップページへ
+= render "footer"
