@@ -42,9 +42,17 @@
         = @post.created_at.strftime("%Y/%m/%d")
     .show-post-wrapper__main__remarks
       = @post.remark
-    .show-post-wrapper__main__comment
-      .show-post-wrapper__main__comment__title
+    .show-post-wrapper__main__comments
+      .show-post-wrapper__main__comments__title
         コメント欄
+      .show-post-wrapper__main__comments__main
+        .show-post-wrapper__main__comments__main__content
+          いいですね！
+        .show-post-wrapper__main__comments__main__sub
+          .show-post-wrapper__main__comments__main__sub__user
+            高村
+          .show-post-wrapper__main__comments__main__sub__time
+            一時間前
 
 
 = render "footer"

@@ -82,7 +82,7 @@
       border-bottom: 1px solid #e7e7e7;
       margin-bottom: 32px;
     }
-    &__comment {
+    &__comments {
       &__title {
         border-left: 3px solid $mainColor;
         font-size: 20px;
@@ -92,6 +92,27 @@
         padding-left: 16px;
         margin: 16px 0 24px;
         font-weight: 500;
+      }
+      &__main {
+        color: #2D2926;
+        padding: 16px;
+        &__content {
+          font-size: medium;
+          line-height: 20px;
+          letter-spacing: 0.4px;
+          color: #2D2926;
+          font-weight: 400;
+          margin: 0 0 12px;
+        }
+        &__sub {
+          display: flex;
+          justify-content: space-between;
+          font-size: small;
+          line-height: 16px;
+          letter-spacing: 0;
+          color: #999;
+          font-weight: 300;
+        }
       }
     }
   }
