@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     end
     @users = @user.followings
     @users2 = @user.followers
+    @posts = @user.posts.includes(:user)
   end
 
   def edit
