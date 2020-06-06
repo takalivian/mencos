@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order("created_at desc").limit(4)
+    @users = User.order("created_at desc").limit(4)
   end
 
   def new

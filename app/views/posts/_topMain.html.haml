@@ -106,21 +106,16 @@
       .top-main__contents__users__title
         人気のユーザー
       .top-main__contents__users__content
-        = link_to  "#" do
-          .top-main__contents__users__content__user
-            .top-main__contents__users__content__user__image
-              = image_tag "wash.jpg", alt: "pic", class: 'image'
-            .top-main__contents__users__content__user__name
-              たっかむ
-            .top-main__contents__users__content__user__follower
-              = icon('fas', 'user')
-              324324
-        = link_to  "#" do
-          .top-main__contents__users__content__user
-            .top-main__contents__users__content__user__image
-              = image_tag "wash.jpg", alt: "pic", class: 'image'
-            .top-main__contents__users__content__user__name
-              たっかむ
-            .top-main__contents__users__content__user__follower
-              = icon('fas', 'user')
-              324324
+        - @users.each do |user|
+          = link_to  user_path(user.id) , class: 'user' do
+            .top-main__contents__users__content__user
+              .top-main__contents__users__content__user__image
+                - if user.image.present?
+                  = image_tag user.image.url, class: 'user-image'
+                - else
+                  = image_tag "silhouette.png", alt: "pic", class: 'user-image'
+              .top-main__contents__users__content__user__name
+                = user.name
+              .top-main__contents__users__content__user__follower
+                = icon('fas', 'user')
+                = user.followers.count

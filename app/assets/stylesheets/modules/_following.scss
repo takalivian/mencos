@@ -1,0 +1,64 @@
+/*モーダル*/
+.follow-up-modal-wrapper, .follower-up-modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #fff;
+  padding: 20px 0;
+  border-radius: 10px;
+  width: 450px;
+  height: auto;
+  text-align: center;
+  & h1 {
+    border-bottom: 1px solid $mainColor;
+    padding: 1rem;
+  }
+  .follow-body {
+    display: grid;
+    max-height: 30rem;
+    padding: 1rem;
+    overflow: scroll;
+    .follow {
+      display: flex;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #e7e7e7;
+    }
+    &__image {
+      .follow-image {
+        border-radius: 50%;
+        border: 0.5px solid #DCD4D4;
+      }
+    }
+    &__name-box {
+      padding: 1rem;
+      display: grid;
+      margin-left: 2rem;
+      &__name {
+        font-weight: bold;
+        color: #000;
+      }
+      &__count {
+        margin-right: auto;
+        color: #999;
+      }
+    }
+  }
+}
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
