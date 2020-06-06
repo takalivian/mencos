@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       @user_age = Agehash.find(@user.age)
     end
     @users = @user.followings
-    @users = @user.followers
+    @users2 = @user.followers
   end
 
   def edit

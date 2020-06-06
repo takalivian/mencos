@@ -1,6 +1,6 @@
 $(function() {
-  $('#login-show').click(function() {
-    $('#login-modal').fadeIn();
+  $('.follower-up-show').click(function() {
+    $('#follower-up-modal').fadeIn();
   });
 
   $('.follow-up-show').click(function() {
@@ -8,7 +8,7 @@ $(function() {
   });
   
   $('.close-modal').click(function() {
-    $('#login-modal').fadeOut();
+    $('#follower-up-modal').fadeOut();
     $('#follow-up-modal').fadeOut();
   });
 });

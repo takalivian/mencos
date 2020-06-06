@@ -48,7 +48,7 @@
           .user-show-wrapper__row__user-contents__right__count__follow.follow-up.follow-up-show
             = @user.followings.count
             フォロー
-          .user-show-wrapper__row__user-contents__right__count__follower
+          .user-show-wrapper__row__user-contents__right__count__follower.follower-up.follower-up-show
             = @user.followers.count
             フォロワー
         .user-show-wrapper__row__user-contents__right__info
@@ -72,6 +72,29 @@
         さんのフォロー
       .follow-body
         - @users.each do |user|
+          = link_to  user_path(user.id) , class: 'follow' do
+            .follow-body__image
+              - if user.image.present?
+                = image_tag user.image.url, width: "80", height: "80", class: 'follow-image'
+              - else
+                = image_tag "silhouette.png", width: "80", height: "80", alt: "pic", class: 'follow-image'
+            .follow-body__name-box
+              .follow-body__name-box__name
+                = user.name
+              .follow-body__name-box__count
+                = icon('fas', 'user')
+                = user.followers.count
+
+#follower-up-modal.follower-up-modal-wrapper
+  .modal
+    .close-modal
+      %i.fa.fa-2x.fa-times
+    #follower-up-form
+      %h1
+        = @user.name
+        さんのフォロワー
+      .follow-body
+        - @users2.each do |user|
           = link_to  user_path(user.id) , class: 'follow' do
             .follow-body__image
               - if user.image.present?
