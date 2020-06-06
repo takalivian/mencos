@@ -4,11 +4,10 @@
       = link_to "/", class: "btn-top" do
         Men's Cosmetic
     .header__content__left
-      .header__content__left__user
-        - if user_signed_in?
-          = link_to '投稿', new_post_path,  class: "btn-post"
-        - else
-          ログインしてください
+      - if user_signed_in?
+        = link_to '投稿', new_post_path,  class: "btn-post"
+      - else
+        ログインしてください
 #nav-toggle
   %div
     %span
