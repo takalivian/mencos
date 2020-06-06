@@ -11,9 +11,9 @@
             = link_to room_path(e.room.id) do
               .room-list
                 .room-list__image
-                  -if e.user.image?
+                  - if e.user.image?
                     = image_tag "#{e.user.image.url}", class: "message-user-image"
-                  -else
+                  - else
                     = image_tag "silhouette.png", class: "message-user-image"
                 .room-list__talk-box
                   .room-list__talk-box__name
@@ -26,6 +26,19 @@
 
       -# DM
       .room-show-wrapper__contents__main__right
+        .room-show-wrapper__contents__main__right__title
+          - @entries.each do |e|
+            - if e.user.id == current_user.id
+            - else
+              .room-show-wrapper__contents__main__right__title__image
+                - if e.user.image?
+                  = image_tag "#{e.user.image.url}", class: "opponent-img"
+                - else
+                  = image_tag "silhouette.png", class: "opponent-img"
+              .room-show-wrapper__contents__main__right__title__name
+                %a{href: "/users/#{e.user.id}", class: "opponent-user"}
+                  = e.user.name
+        .room-show-wrapper__contents__main__right__message
 -# %h1 DM
 -# %h4 参加者
 -# - @entries.each do |e|

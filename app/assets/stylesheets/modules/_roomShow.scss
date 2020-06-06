@@ -72,6 +72,34 @@
       &__right {
         height: 100%;
         width: calc(100% - 350px);
+        &__title {
+          border: 1px solid #E8E1E1;
+          font-size: 16px;
+          font-weight: 600;
+          height: 60px;
+          padding: 0 20px;
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          line-height: 60px;
+          display: flex;
+          &__image {
+            border-radius: 10px;
+            .opponent-img {
+              width: 45px;
+              height: 45px;
+              border-radius: 50%;
+              border: 0.5px solid #DCD4D4;
+              margin-top: 6px;
+            }
+          }
+          &__name {
+            margin-left: 20px;
+            .opponent-user {
+              color: $mainBlack;
+            }
+          }
+        }
       }
     }
   }
