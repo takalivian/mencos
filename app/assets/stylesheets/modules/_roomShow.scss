@@ -29,7 +29,14 @@
           text-align: center;
           line-height: 60px;
         }
+        &__list {
+          height: calc(100% - 60px);
+          width: 100%;
+        }
       }
+
+
+      // DM
       &__right {
         height: 100%;
         width: calc(100% - 350px);
