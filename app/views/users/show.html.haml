@@ -60,6 +60,21 @@
       .user-show-wrapper__row__post-contents__header
         クチコミ一覧
       .user-show-wrapper__row__post-contents__items
+        .user-show-wrapper__row__post-contents__items__content
+          - @posts.each do |post|
+            = link_to  post_path(post.id), class: 'link-item' do
+              .user-show-wrapper__row__post-contents__items__content__image
+                = image_tag post.images[0].url.url, width: "100", height: "100", alt: "pic", class: 'image'
+              .user-show-wrapper__row__post-contents__items__content__info
+                .user-show-wrapper__row__post-contents__items__content__info__brand
+                  = post.brand
+                .user-show-wrapper__row__post-contents__items__content__info__name
+                  = post.name.truncate(15)
+                .user-show-wrapper__row__post-contents__items__content__info__price
+                  = post.praice
+                  円（税抜）
+                .user-show-wrapper__row__post-contents__items__content__info__text
+                  もっと見る
 
 -# モーダル
 #follow-up-modal.follow-up-modal-wrapper
