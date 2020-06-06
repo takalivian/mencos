@@ -87,9 +87,13 @@
           &__image {
             width: 100%;
             .user-image {
-              width: 100%;
-              object-fit: contain;
+              width: 80px;
+              height: 80px;
+              object-fit: cover;
               border-radius: 50%;
+              display: block;
+              margin: 0 auto;
+              border: 0.5px solid #DCD4D4;
             }
           }
           &__name {
