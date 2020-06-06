@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     unless @user.age.blank?
       @user_age = Agehash.find(@user.age)
     end
+    @users = @user.followings
   end
 
   def edit

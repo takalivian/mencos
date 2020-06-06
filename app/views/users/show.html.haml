@@ -45,10 +45,9 @@
               = @user.beard
               ／
         .user-show-wrapper__row__user-contents__right__count
-          .user-show-wrapper__row__user-contents__right__count__follow
-            = link_to  following_user_path(@user.id) do
-              = @user.followings.count
-              フォロー
+          .user-show-wrapper__row__user-contents__right__count__follow.follow-up.follow-up-show
+            = @user.followings.count
+            フォロー
           .user-show-wrapper__row__user-contents__right__count__follower
             = @user.followers.count
             フォロワー
@@ -61,4 +60,29 @@
       .user-show-wrapper__row__post-contents__header
         クチコミ一覧
       .user-show-wrapper__row__post-contents__items
+
+-# モーダル
+#follow-up-modal.follow-up-modal-wrapper
+  .modal
+    .close-modal
+      %i.fa.fa-2x.fa-times
+    #follow-up-form
+      %h1
+        = @user.name
+        さんのフォロー
+      .follow-body
+        - @users.each do |user|
+          = link_to  user_path(user.id) , class: 'follow' do
+            .follow-body__image
+              - if user.image.present?
+                = image_tag user.image.url, width: "80", height: "80", class: 'follow-image'
+              - else
+                = image_tag "silhouette.png", width: "80", height: "80", alt: "pic", class: 'follow-image'
+            .follow-body__name-box
+              .follow-body__name-box__name
+                = user.name
+              .follow-body__name-box__count
+                = icon('fas', 'user')
+                = user.followers.count
+                
 = render "posts/footer"
