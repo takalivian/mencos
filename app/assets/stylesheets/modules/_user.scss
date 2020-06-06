@@ -105,10 +105,63 @@
         border-bottom: 2px solid $mainColor;
       }
       &__items {
-        width: initial;
-        padding: 10%;
-        background-color: gray;
+        padding: 0 7rem;
         margin-top: 2%;
+        &__content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .link-item {
+            display: flex;
+            width: 20rem;
+            padding: 2rem 1rem;
+          }
+          &__image {
+
+          }
+          &__info {
+            width: 100%;
+            margin-left: 1rem;
+            &__brand {
+              display: block;
+              font-size: x-small;
+              line-height: 16px;
+              color: #666;
+              font-weight: 300;
+              margin: 8px 0 4px;
+            }
+            &__name {
+              font-size: inherit;
+              line-height: 20px;
+              letter-spacing: 0.4px;
+              color: #2D2926;
+              margin: 0;
+              font-weight: 400;
+            }
+            &__price {
+              margin-top: 8px;
+              list-style-type: none;
+              padding: 0;
+              font-size: small;
+              line-height: 16px;
+              letter-spacing: 0.4px;
+              color: #999;
+              font-weight: 300;
+            }
+            &__text {
+              color: $mainColor;
+              width: fit-content;
+              margin-left: auto;
+              font-size: small;
+            }
+          }
+        }
+        &__no-content {
+          padding: 4rem;
+          margin: auto;
+          width: fit-content;
+          font-size: large;
+        }
       }
     }
   }

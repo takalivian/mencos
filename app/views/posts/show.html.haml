@@ -30,7 +30,7 @@
           - else
             = image_tag "silhouette.png", class: "user-img" 
         .show-post-wrapper__main__user__info
-          - unless @post.user.name.blank?
+          - unless @user_age.blank?
             = @user_age.name
             ／
           - unless @post.user.hair_quality.blank? || @post.user.hair_length.blank?
