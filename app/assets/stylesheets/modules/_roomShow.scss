@@ -11,6 +11,16 @@
       max-width: 980px;
       height: 100%;
       margin: auto;
+      display: flex;
+      &__left {
+        height: 100%;
+        overflow: hidden;
+        width: 350px;
+      }
+      &__right {
+        height: 100%;
+        width: calc(100% - 350px);
+      }
     }
   }
 }
