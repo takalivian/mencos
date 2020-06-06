@@ -1,0 +1,17 @@
+.room-show-wrapper {
+  height: calc(100vh - 4rem);
+  width: 100vw;
+  &__contents {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    &__main {
+      max-width: 980px;
+      height: 100%;
+      margin: auto;
+    }
+  }
+}
+
