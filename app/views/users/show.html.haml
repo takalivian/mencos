@@ -61,7 +61,7 @@
         クチコミ一覧
       
       .user-show-wrapper__row__post-contents__items
-        - if @post
+        - if @posts
           .user-show-wrapper__row__post-contents__items__content
             - @posts.each do |post|
               = link_to  post_path(post.id), class: 'link-item' do
