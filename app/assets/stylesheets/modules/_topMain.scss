@@ -70,10 +70,9 @@
       &__content {
         width: 100%;
         display: flex;
+        justify-content: space-between;
         overflow: scroll;
         .user {
-          display: flex;
-          margin-right: 1rem;
         }
         &__user  {
           color: $mainBlack;
