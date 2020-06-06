@@ -5,6 +5,7 @@ class UsersController < ApplicationController
       @user_age = Agehash.find(@user.age)
     end
     @users = @user.followings
+    @users = @user.followers
   end
 
   def edit
@@ -17,16 +18,6 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def following
-    @user = User.find(params[:id])
-    @users = @user.followings
-  end
-
-  def followers
-    @user = User.find(params[:id])
-    @users = @user.followers
   end
 
   private
