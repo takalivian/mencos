@@ -46,8 +46,9 @@
               ／
         .user-show-wrapper__row__user-contents__right__count
           .user-show-wrapper__row__user-contents__right__count__follow
-            = @user.followings.count
-            フォロー
+            = link_to  following_user_path(@user.id) do
+              = @user.followings.count
+              フォロー
           .user-show-wrapper__row__user-contents__right__count__follower
             = @user.followers.count
             フォロワー
