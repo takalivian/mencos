@@ -40,6 +40,16 @@
                 padding: 0.1rem 0.5rem;
                 color: $mainColor;
                 border: 0.5px solid $mainColor;
+                cursor: pointer;
+              }
+              .new-dm {
+                border-radius: 50%;
+                padding: 0.35rem 0.5rem;
+                color: $mainColor;
+                background-color: #fff;
+                font-size: x-large;
+                border: 0.5px solid $mainColor;
+                cursor: pointer;
               }
               .follows {
                 text-decoration: none;

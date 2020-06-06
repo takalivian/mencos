@@ -28,7 +28,8 @@
                       = form_for @room do |f|
                         = fields_for @entry do |e|
                           = e.hidden_field :user_id, :value=> @user.id
-                        = f.submit "チャットを始める"
+                        = f.button type: "submit", class: "new-dm" do
+                          = icon('fas', 'envelope')
                   = form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f|
                     = f.hidden_field :follow_id, value: @user.id
                     = f.submit 'フォロー中', class: 'follow-now'
