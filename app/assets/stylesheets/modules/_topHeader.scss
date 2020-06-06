@@ -20,12 +20,6 @@
     &__left {
       display: flex;
       text-decoration: none;
-      &__user {
-        margin-right: 1rem;
-        .btn-user {
-          text-decoration: none;
-        }
-      }
       &__post {
         .btn-post {
           text-decoration: none;
@@ -37,7 +31,7 @@
 
 #nav-toggle {
   position: fixed;
-  top: 25px;
+  top: 20px;
   right: 25px;
   height: 32px;
   cursor: pointer;
@@ -125,46 +119,46 @@ span {
 
 
 #gloval-nav {
-a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 0;
-  transition: color .6s ease;
-  
-  &:hover {
-    color: #666;
-  }
-}
-
-ul {
-  list-style: none;
-  
-  li {
-    opacity: 0;
-    transform: translateX(200px);
-    transition:  transform .6s ease, opacity .2s ease;
-
-    &:nth-child(2) {
-      transition-delay: .15s;
-    }
-    &:nth-child(3) {
-      transition-delay: .3s;
-    }
-    &:nth-child(4) {
-      transition-delay: .45s;
-    }
-    &:nth-child(5) {
-      transition-delay: .6s;
-    }
-    &:nth-child(6) {
-      transition-delay: .75s;
-    }
-    &:nth-child(7) {
-      transition-delay: .9s;
+  & a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: color .6s ease;
+    
+    &:hover {
+      color: #666;
     }
   }
-}
+
+  & ul {
+    list-style: none;
+    
+    & li {
+      opacity: 0;
+      transform: translateX(200px);
+      transition:  transform .6s ease, opacity .2s ease;
+
+      &:nth-child(2) {
+        transition-delay: .15s;
+      }
+      &:nth-child(3) {
+        transition-delay: .3s;
+      }
+      &:nth-child(4) {
+        transition-delay: .45s;
+      }
+      &:nth-child(5) {
+        transition-delay: .6s;
+      }
+      &:nth-child(6) {
+        transition-delay: .75s;
+      }
+      &:nth-child(7) {
+        transition-delay: .9s;
+      }
+    }
+  }
 } 
 
 /* open */
