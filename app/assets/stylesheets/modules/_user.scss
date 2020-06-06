@@ -33,33 +33,45 @@
           &__follow {
             font-size: x-large;
             margin: auto 0;
-            .follows {
-              text-decoration: none;
-              color: $mainColor;
-              display: block;
-              font-size: 12px;
-              line-height: 16px;
-              letter-spacing: 0;
-              font-weight: 300;
-              padding: 8px;
-              border-radius: 4px;
-              background-color: #fff;
-              border: 1px solid $mainColor;
-              cursor: pointer;
-            }
-            .follow-now {
-              text-decoration: none;
-              color: #fff;
-              display: block;
-              font-size: 12px;
-              line-height: 16px;
-              letter-spacing: 0;
-              font-weight: 300;
-              padding: 8px;
-              border-radius: 4px;
-              background-color: $mainColor;
-              border: 1px solid $mainColor;
-              cursor: pointer;
+            .follower-dm {
+              display: flex;
+              .dm {
+                border-radius: 50%;
+                padding: 0.1rem 0.5rem;
+                color: $mainColor;
+                border: 0.5px solid $mainColor;
+              }
+              .follows {
+                text-decoration: none;
+                color: $mainColor;
+                display: block;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0;
+                font-weight: 300;
+                padding: 8px;
+                border-radius: 4px;
+                background-color: #fff;
+                border: 1px solid $mainColor;
+                height: 100%;
+                cursor: pointer;
+              }
+              .follow-now {
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0;
+                font-weight: 300;
+                padding: 8px;
+                border-radius: 4px;
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
+                height: 100%;
+                margin-left: 2rem;
+                cursor: pointer;
+              }
             }
           }
         }

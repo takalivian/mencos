@@ -17,14 +17,25 @@
               = link_to edit_user_path, class: "btn-edit" do
                 = icon('fas', 'cog')
             - else 
-              - if current_user.following?(@user)
-                = form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f|
-                  = f.hidden_field :follow_id, value: @user.id
-                  = f.submit 'フォロー中', class: 'follow-now'
-              - else
-                = form_for(current_user.relationships.build) do |f|
-                  = f.hidden_field :follow_id, value: @user.id
-                  = f.submit 'フォローする', class: 'follows'
+              .follower-dm
+                - if current_user.following?(@user)
+                  - if @user.id == current_user.id
+                  - else
+                    - if @isRoom == true
+                      = link_to "/rooms/#{@roomId}", class: "dm" do
+                        = icon('fas', 'envelope')
+                    - else
+                      = form_for @room do |f|
+                        = fields_for @entry do |e|
+                          = e.hidden_field :user_id, :value=> @user.id
+                        = f.submit "チャットを始める"
+                  = form_for(current_user.relationships.find_by(follow_id: @user.id), html: { method: :delete }) do |f|
+                    = f.hidden_field :follow_id, value: @user.id
+                    = f.submit 'フォロー中', class: 'follow-now'
+                - else
+                  = form_for(current_user.relationships.build) do |f|
+                    = f.hidden_field :follow_id, value: @user.id
+                    = f.submit 'フォローする', class: 'follows'
         .user-show-wrapper__row__user-contents__right__data
           .user-show-wrapper__row__user-contents__right__data__text
             - unless @user_age.blank?
@@ -129,14 +140,3 @@
                 = user.followers.count
                 
 = render "posts/footer"
-
-- if @user.id == current_user.id
-- else
-  - if @isRoom == true
-    %p
-      %a{:href => "/rooms/#{@roomId}"} チャットへ
-  - else
-    = form_for @room do |f|
-      = fields_for @entry do |e|
-        = e.hidden_field :user_id, :value=> @user.id
-      = f.submit "チャットを始める"
