@@ -1,6 +1,7 @@
 .room-show-wrapper {
   height: calc(100vh - 4rem);
   width: 100vw;
+  background-color: #F4F3F4;
   &__contents {
     align-items: center;
     height: 100%;
@@ -12,10 +13,22 @@
       height: 100%;
       margin: auto;
       display: flex;
+      background-color: #fff;
       &__left {
         height: 100%;
         overflow: hidden;
         width: 350px;
+        &__title {
+          border: 1px solid #E8E1E1;
+          font-size: 16px;
+          font-weight: 600;
+          height: 60px;
+          padding: 0 20px;
+          width: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          line-height: 60px;
+        }
       }
       &__right {
         height: 100%;
