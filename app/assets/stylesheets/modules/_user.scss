@@ -156,6 +156,12 @@
             }
           }
         }
+        &__no-content {
+          padding: 4rem;
+          margin: auto;
+          width: fit-content;
+          font-size: large;
+        }
       }
     }
   }
