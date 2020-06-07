@@ -18,6 +18,8 @@
         height: 100%;
         overflow: hidden;
         width: 350px;
+        border: 1px solid #E8E1E1;
+        border-right: none;
         &__title {
           font-size: 16px;
           font-weight: 600;
@@ -27,6 +29,7 @@
           box-sizing: border-box;
           text-align: center;
           line-height: 60px;
+          border-bottom: 1px solid #E8E1E1;
         }
         &__list {
           height: calc(100% - 60px);
@@ -71,6 +74,7 @@
       &__right {
         height: 100%;
         width: calc(100% - 350px);
+        border: 1px solid #E8E1E1;
         &__title {
           font-size: 16px;
           font-weight: 600;
@@ -81,6 +85,7 @@
           text-align: center;
           line-height: 60px;
           display: flex;
+          border-bottom: 1px solid #E8E1E1;
           &__image {
             border-radius: 10px;
             .opponent-img {
@@ -99,7 +104,6 @@
           }
         }
         &__message {
-          border: 1px solid #E8E1E1;
           height: calc(100% - 60px);
           width: 100%;
           box-sizing: border-box;
