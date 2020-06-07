@@ -188,6 +188,11 @@
             }
           }
         }
+        &__no {
+          text-align: center;
+          font-size: x-large;
+          line-height: 40rem;
+        }
       }
     }
   }
@@ -197,4 +202,9 @@
   text-align: center;
   padding-bottom: 5%;
   font-size: 10px;
+}
+.no-rooms {
+  text-align: center;
+  font-size: inherit;
+  line-height: 33rem;
 }
