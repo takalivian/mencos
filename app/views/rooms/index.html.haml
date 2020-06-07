@@ -1,0 +1,34 @@
+= render "posts/header"
+.room-show-wrapper
+  .room-show-wrapper__contents
+    .room-show-wrapper__contents__main
+      .room-show-wrapper__contents__main__left
+        .room-show-wrapper__contents__main__left__title
+          Direct
+        - if @currentEntries.present?
+          .room-show-wrapper__contents__main__left__list
+            - @anotherEntries.each do |e|
+              = link_to room_path(e.room.id) do
+                .room-list
+                  .room-list__image
+                    - if e.user.image?
+                      = image_tag "#{e.user.image.url}", class: "message-user-image"
+                    - else
+                      = image_tag "silhouette.png", class: "message-user-image"
+                  .room-list__talk-box
+                    .room-list__talk-box__name
+                      = e.user.name
+                    .room-list__talk-box__last-talk
+                      - if e.room.messages.present? 
+                        = e.room.messages.order(created_at: :desc).take.try(:content).truncate(15)
+                      -else
+                        まだメッセージはありません。
+        - else
+          .no-rooms
+            メッセージがありません。
+
+      -# DM
+      .room-show-wrapper__contents__main__right
+        .room-show-wrapper__contents__main__right__no
+          %i.far.fa-paper-plane
+          ダイレクトメッセージが送れます。

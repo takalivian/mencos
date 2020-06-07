@@ -1,0 +1,71 @@
+= render "posts/header"
+.room-show-wrapper
+  .room-show-wrapper__contents
+    .room-show-wrapper__contents__main
+      -# メッセージ一覧
+      .room-show-wrapper__contents__main__left
+        .room-show-wrapper__contents__main__left__title
+          Direct
+        .room-show-wrapper__contents__main__left__list
+          - @anotherEntries.each do |e|
+            = link_to room_path(e.room.id) do
+              .room-list
+                .room-list__image
+                  - if e.user.image?
+                    = image_tag "#{e.user.image.url}", class: "message-user-image"
+                  - else
+                    = image_tag "silhouette.png", class: "message-user-image"
+                .room-list__talk-box
+                  .room-list__talk-box__name
+                    = e.user.name
+                  .room-list__talk-box__last-talk
+                    - if e.room.messages.present? 
+                      = e.room.messages.order(created_at: :desc).take.try(:content).truncate(15)
+                    -else
+                      まだメッセージはありません。
+
+      -# DM
+      .room-show-wrapper__contents__main__right
+        .room-show-wrapper__contents__main__right__title
+          - @entries.each do |e|
+            - if e.user.id == current_user.id
+            - else
+              .room-show-wrapper__contents__main__right__title__image
+                %a{href: "/users/#{e.user.id}"}
+                  - if e.user.image?
+                    = image_tag "#{e.user.image.url}", class: "opponent-img"
+                  - else
+                    = image_tag "silhouette.png", class: "opponent-img"
+              .room-show-wrapper__contents__main__right__title__name
+                %a{href: "/users/#{e.user.id}", class: "opponent-user"}
+                  = e.user.name
+        .room-show-wrapper__contents__main__right__message
+          .room-show-wrapper__contents__main__right__message__top
+            - if @messages.present?
+              - @messages.each do |m|
+                - if m.user.id != current_user.id
+                  .messages-date
+                    = m.created_at.strftime("%Y年%m月%d日 %H:%M")
+                  .left-message-box
+                    %a{href: "/users/#{m.user.id}"}
+                      -if m.user.image?
+                        = image_tag "#{m.user.image.url}", class: "message-user-image"
+                      -else
+                        = image_tag "silhouette.png", class: "message-user-image"
+                    .left-message-box__content
+                      = m.content
+                -else
+                  .messages-date
+                    = m.created_at.strftime("%Y年%m月%d日 %H:%M")
+                  .right-message-box
+                    .right-message-box__right
+                      .right-message-box__right__content
+                        = m.content
+            - else
+              %h3.text-center メッセージはまだありません
+          .room-show-wrapper__contents__main__right__message__bottom
+            = form_for @message do |f|
+              = f.text_field :content, :placeholder => "メッセージを入力して下さい", class: "form-text"
+              = f.hidden_field :room_id, :value => @room.id
+              %button{:type => "submit", class: "form-btn"}
+                %i.far.fa-paper-plane

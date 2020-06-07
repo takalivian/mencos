@@ -92,14 +92,14 @@
                 投稿者
               - @posts.each do |post|
                 %td.top-main__contents__new-posts__content__body
-                  = link_to  user_path(post.user.id) do
+                  = link_to  user_path(post.user.id), class: 'link' do
                     = post.user.name
             %tr
               %td.top-main__contents__new-posts__content__title
                 商品リンク
               - @posts.each do |post|
                 %td.top-main__contents__new-posts__content__body
-                  = link_to  post_path(post.id) do
+                  = link_to  post_path(post.id), class: 'link' do
                     評価を見る
     -# 人気ユーザー
     .top-main__contents__users
