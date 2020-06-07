@@ -5,7 +5,8 @@
     .user-show-wrapper__row__user-contents
       .user-show-wrapper__row__user-contents__left
         - if @user.image.present?
-          = image_tag @user.image.url, class: 'user-image'
+          %a{"data-lightbox" => "abc", :href => "#{@user.image.url}"}
+            = image_tag @user.image.url, class: 'user-image'
         - else
           = image_tag "silhouette.png", alt: "pic", class: 'user-image'
       .user-show-wrapper__row__user-contents__right
