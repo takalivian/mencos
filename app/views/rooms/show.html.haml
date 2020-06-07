@@ -31,10 +31,11 @@
             - if e.user.id == current_user.id
             - else
               .room-show-wrapper__contents__main__right__title__image
-                - if e.user.image?
-                  = image_tag "#{e.user.image.url}", class: "opponent-img"
-                - else
-                  = image_tag "silhouette.png", class: "opponent-img"
+                %a{href: "/users/#{e.user.id}"}
+                  - if e.user.image?
+                    = image_tag "#{e.user.image.url}", class: "opponent-img"
+                  - else
+                    = image_tag "silhouette.png", class: "opponent-img"
               .room-show-wrapper__contents__main__right__title__name
                 %a{href: "/users/#{e.user.id}", class: "opponent-user"}
                   = e.user.name
@@ -68,31 +69,3 @@
               = f.hidden_field :room_id, :value => @room.id
               %button{:type => "submit", class: "form-btn"}
                 %i.far.fa-paper-plane
-
--# %h1 DM
--# %h4 参加者
--# - @entries.each do |e|
--#   %h5
--#     %strong
--#       %a{:href => "/users/#{e.user.id}"}
--#         = e.user.email
--#         さん
--# %hr/
--# - if @messages.present?
--#   - @messages.each do |m|
--#     %strong= m.content
--#     %small
--#       by
--#       %strong
--#         %a{:href => "/users/#{m.user_id}"}
--#           = m.user.email
--#           さん
--#     %hr/
--# - else
--#   %h3.text-center メッセージはまだありません
--# = form_for @message do |f|
--#   = f.text_field :content, :placeholder => "メッセージを入力して下さい" , :size => 70
--#   = f.hidden_field :room_id, :value => @room.id
--#   %br/
--#   = f.submit "投稿する"
-
