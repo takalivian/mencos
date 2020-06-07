@@ -6,21 +6,20 @@
     .header__content__left
       - if user_signed_in?
         = link_to '投稿', new_post_path,  class: "btn-post"
-      - else
-        ログインしてください
-#nav-toggle
-  %div
-    %span
-    %span
-    %span
-#gloval-nav
-  %nav
-    %ul
-      %li
-        = link_to "/", class: "btn-top" do
-          Men's Cosmetic
-      %li
-        = link_to user_path(current_user),  class: "btn-user" do
-          マイページ
-      %li
-        = link_to 'ログアウト', destroy_user_session_path, class: "headerContent__rightBox--items", method: :delete
+- if user_signed_in?
+  #nav-toggle
+    %div
+      %span
+      %span
+      %span
+  #gloval-nav
+    %nav
+      %ul
+        %li
+          = link_to "/", class: "btn-top" do
+            Men's Cosmetic
+        %li
+          = link_to user_path(current_user),  class: "btn-user" do
+            マイページ
+        %li
+          = link_to 'ログアウト', destroy_user_session_path, class: "headerContent__rightBox--items", method: :delete
