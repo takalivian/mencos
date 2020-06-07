@@ -1,8 +1,21 @@
-= @category.name
+= render "header"
+.post-category-wrapper
+  .post-category-wrapper__contents
+    .post-category-wrapper__contents__category
+      - @categories.each do |c|
+        %ul
+          %li
+            = link_to  category_post_path(c), class: 'parent' do
+              = c.name
+      
 
-- @child.each do |c|
-  = c.name
+= render "footer"
 
-- @posts.each do |p|
-  = p.name
+-# = @category.name
+
+-# - @child.each do |c|
+-#   = c.name
+
+-# - @posts.each do |p|
+-#   = p.name
   

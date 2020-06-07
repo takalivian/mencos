@@ -1,0 +1,18 @@
+.post-category-wrapper {
+  width: 980px;
+  margin: 0 auto;
+  margin-top: 56px;
+  margin-bottom: 56px;
+  &__contents {
+    height: 100%;
+    width: 100%;
+    &__category {
+      display: flex;
+      justify-content: space-between;
+      .parent {
+        color: #5F5354;
+        font-size: medium;
+      }
+    }
+  }
+}

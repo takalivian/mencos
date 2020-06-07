@@ -45,7 +45,7 @@ class PostsController < ApplicationController
   end
 
   def category
-
+    @categories = Category.where(ancestry: nil)
     @category = Category.find_by(id: params[:id])
 
     @child = @category.children
