@@ -39,6 +39,36 @@
                 %a{href: "/users/#{e.user.id}", class: "opponent-user"}
                   = e.user.name
         .room-show-wrapper__contents__main__right__message
+          .room-show-wrapper__contents__main__right__message__top
+            - if @messages.present?
+              - @messages.each do |m|
+                - if m.user.id != current_user.id
+                  .messages-date
+                    = m.created_at.strftime("%Y年%m月%d日 %H:%M")
+                  .left-message-box
+                    %a{href: "/users/#{m.user.id}"}
+                      -if m.user.image?
+                        = image_tag "#{m.user.image.url}", class: "message-user-image"
+                      -else
+                        = image_tag "silhouette.png", class: "message-user-image"
+                    .left-message-box__content
+                      = m.content
+                -else
+                  .messages-date
+                    = m.created_at.strftime("%Y年%m月%d日 %H:%M")
+                  .right-message-box
+                    .right-message-box__right
+                      .right-message-box__right__content
+                        = m.content
+            - else
+              %h3.text-center メッセージはまだありません
+          .room-show-wrapper__contents__main__right__message__bottom
+            = form_for @message do |f|
+              = f.text_field :content, :placeholder => "メッセージを入力して下さい", class: "form-text"
+              = f.hidden_field :room_id, :value => @room.id
+              %button{:type => "submit", class: "form-btn"}
+                %i.far.fa-paper-plane
+
 -# %h1 DM
 -# %h4 参加者
 -# - @entries.each do |e|

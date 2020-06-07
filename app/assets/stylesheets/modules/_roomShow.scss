@@ -103,9 +103,95 @@
           height: calc(100% - 60px);
           width: 100%;
           box-sizing: border-box;
+          &__top {
+            box-sizing: border-box;
+            height: calc(100% - 60px);
+            padding: 20px 20px 0;
+            overflow: auto;
+            background:
+            linear-gradient(white 30%, rgba(255,255,255,0)),
+            linear-gradient(rgba(255,255,255,0), white 70%) 0 100%,
+            radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
+            radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+            background-repeat: no-repeat;
+            background-color: #fff;
+            background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+            background-attachment: local, local, scroll, scroll;
+            .left-message-box{
+              display: flex;
+              text-align: left;
+              margin-bottom: 30px;
+              padding-right: 20%;
+              .message-user-image{
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+              }
+              &__content{
+                padding: 16px 20px;
+                background-color: #EEEEEE;
+                color: #444444;
+                border-radius: 0 100px 100px 100px / 0 100px 100px 100px;
+                line-height: initial;
+                width: fit-content;
+              }
+            }
+            .right-message-box{
+              text-align: right;
+              margin-bottom: 30px;
+              padding-left: 20%;
+              &__right{
+                width: fit-content;
+                margin-left: auto;
+                display: flex;
+                &__content{
+                  padding: 16px 20px;
+                  border-radius: 100px 100px 0 100px / 100px 100px 0 100px;
+                  color: #ffffff;
+                  background-color: $mainColor;
+                  text-align: left;
+                  line-height: initial;
+                }
+              }
+            }
+          }
+          &__bottom {
+            height: 60px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.5rem;
+            .new_message {
+              width: 100%;
+              display: flex;
+              font-size: 20px;
+              border-radius: 30px;
+              border: 0.5px solid #DCD4D4;
+              .form-text {
+                border: none;
+                outline: none;
+                width: 83%;
+                border-radius: 30px;
+                padding-left: 2rem;
+              }
+              .form-btn {
+                background-color: #fff;
+                font-size: larger;
+                border: none;
+                outline: none;
+                margin: auto;
+                cursor: pointer;
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
+.messages-date {
+  text-align: center;
+  padding-bottom: 5%;
+  font-size: 10px;
+}
