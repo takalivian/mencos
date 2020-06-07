@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   }
   root to:"posts#index"
   resources :posts, only: [:index, :new, :create, :show] do
+    member do
+      get :category
+    end
+    
     collection do
       get 'get_category_children', defaults: { format: 'json' }
       get 'get_category_grandchildren', defaults: { format: 'json' }
