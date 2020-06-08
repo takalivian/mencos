@@ -12,9 +12,12 @@
         = @category.name
       .post-category-wrapper__contents__category-title__sub
         = @category.name
-        に関するクチコミが
-        = @posts_number
-        件投稿されています。
+        - if @posts_number == 0
+          に関するクチコミがまだありません。
+        - else
+          に関するクチコミが
+          = @posts_number
+          件投稿されています。
     .post-category-wrapper__contents__posts
       .post-category-wrapper__contents__posts__title
         商品一覧
@@ -33,18 +36,22 @@
                   .user-show-wrapper__row__post-contents__items__content__info__price
                     = post.praice
                     円（税抜）
+                  .user-show-wrapper__row__post-contents__items__content__info__star
+                    %div{:id => "star-rate-#{post.id}"}
+                      :javascript
+                        $('#star-rate-#{post.id}').raty({
+                          size: 36,
+                          starOff:  '#{asset_path('star-off.png')}',
+                          starOn : '#{asset_path('star-on.png')}',
+                          starHalf: '#{asset_path('star-half.png')}',
+                          half: true,
+                          readOnly: true,
+                          score: #{post.star},
+                        });
+                      = post.star
                   .user-show-wrapper__row__post-contents__items__content__info__text
                     もっと見る
         - else
           .user-show-wrapper__row__post-contents__items__no-content
             まだ投稿がありません
 = render "footer"
-
--# = @category.name
-
--# - @child.each do |c|
--#   = c.name
-
--# - @posts.each do |p|
--#   = p.name
-  

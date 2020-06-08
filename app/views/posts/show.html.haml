@@ -22,6 +22,18 @@
       参考価格：
       = @post.praice
       円
+      %div{:id => "star-rate-#{@post.id}"}
+        :javascript
+          $('#star-rate-#{@post.id}').raty({
+            size: 36,
+            starOff:  '#{asset_path('star-off.png')}',
+            starOn : '#{asset_path('star-on.png')}',
+            starHalf: '#{asset_path('star-half.png')}',
+            half: true,
+            readOnly: true,
+            score: #{@post.star},
+          });
+        = @post.star
     .show-post-wrapper__main__user
       = link_to  user_path(@post.user.id), class: "link-user" do
         .show-post-wrapper__main__user__image

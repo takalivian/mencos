@@ -88,6 +88,19 @@
                   .user-show-wrapper__row__post-contents__items__content__info__price
                     = post.praice
                     円（税抜）
+                  .user-show-wrapper__row__post-contents__items__content__info__star
+                    %div{:id => "star-rate-#{post.id}"}
+                      :javascript
+                        $('#star-rate-#{post.id}').raty({
+                          size: 36,
+                          starOff:  '#{asset_path('star-off.png')}',
+                          starOn : '#{asset_path('star-on.png')}',
+                          starHalf: '#{asset_path('star-half.png')}',
+                          half: true,
+                          readOnly: true,
+                          score: #{post.star},
+                        });
+                      = post.star
                   .user-show-wrapper__row__post-contents__items__content__info__text
                     もっと見る
         - else
