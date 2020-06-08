@@ -170,6 +170,10 @@
               color: #999;
               font-weight: 300;
             }
+            &__star {
+              color: $mainBlack;
+              font-size: x-small;
+            }
             &__text {
               color: $mainColor;
               width: fit-content;
