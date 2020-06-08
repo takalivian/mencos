@@ -34,5 +34,17 @@
         color: #666;
       }
     }
+    &__posts {
+      &__title {
+        border-left: 3px solid $mainColor;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.8px;
+        color: #2D2926;
+        padding-left: 16px;
+        margin: 16px 0 24px;
+        font-weight: 500;
+      }
+    }
   }
 }
