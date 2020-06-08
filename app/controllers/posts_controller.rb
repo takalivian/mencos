@@ -50,6 +50,7 @@ class PostsController < ApplicationController
 
     @child = @category.children
     @posts = Post.where(category_id: @child)
+    @posts_number = Post.where(category_id: @child).count
 
   end
 
