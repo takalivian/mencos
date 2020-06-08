@@ -44,6 +44,16 @@ class PostsController < ApplicationController
     @category_grandchildren = Category.find("#{params[:child_id]}").children
   end
 
+  def category
+    @categories = Category.where(ancestry: nil)
+    @category = Category.find_by(id: params[:id])
+
+    @child = @category.children
+    @posts = Post.where(category_id: @child)
+    @posts_number = Post.where(category_id: @child).count
+
+  end
+
   private
 
   def post_params
