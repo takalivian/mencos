@@ -8,3 +8,31 @@
   position:  relative;
   animation: anime1 3s ease;
 }
+
+.scroll {
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+  width: 3em;
+  height: 3em;
+  animation: anime2 3s ease;
+  span {
+    ont-size: x-large;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    transform: translateY(0) rotate(-45deg);
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    z-index: 2;
+    animation: popping-arrow 2s infinite ease-out;
+  }
+  &:hover span {
+    transform: translateY(.5em) rotate(-45deg) ;
+    animation: paused;
+  }
+}
+
+
