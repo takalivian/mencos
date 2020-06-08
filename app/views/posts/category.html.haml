@@ -1,12 +1,18 @@
 = render "header"
 .post-category-wrapper
   .post-category-wrapper__contents
-    .post-category-wrapper__contents__category
+    .post-category-wrapper__contents__category-list
       - @categories.each do |c|
         %ul
           %li
             = link_to  category_post_path(c), class: 'parent' do
               = c.name
+    .post-category-wrapper__contents__category-title
+      .post-category-wrapper__contents__category-title__main
+        = @category.name
+      .post-category-wrapper__contents__category-title__sub
+        = @category.name
+        に関するクチコミが307585件投稿されています。
       
 
 = render "footer"
