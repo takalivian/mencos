@@ -2,11 +2,14 @@
 .post-category-wrapper
   .post-category-wrapper__contents
     .post-category-wrapper__contents__category-list
-      - @categories.each do |c|
-        %ul
+      - @categories.each do |category|
+        %ul.dropdwn
           %li
-            = link_to  category_post_path(c), class: 'parent' do
-              = c.name
+            = link_to category.name, category_post_path(category)
+            %ul.dropdwn_menu
+              - category.children.each do |child|
+                %li
+                  =link_to child.name, category_post_path(child)
     .post-category-wrapper__contents__category-title
       .post-category-wrapper__contents__category-title__main
         = @category.name
