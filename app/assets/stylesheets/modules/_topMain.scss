@@ -27,6 +27,10 @@
               font-size: larger;
             }
           }
+          & li:hover {
+            opacity: 0.6;
+            transition-duration: 0.3s;
+          }
         }
       }
     }
@@ -81,6 +85,10 @@
         overflow: scroll;
         .user {
         }
+        .user:hover {
+          opacity: 0.6;
+          transition-duration: 0.3s;
+        }
         &__user  {
           color: $mainBlack;
           width: 144px;
@@ -112,7 +120,11 @@
             font-size: x-small;
             color: #999;
           }
-        } 
+        }
+        &__user:hover {
+          opacity: 0.6;
+          transition-duration: 0.3s;
+        }
       }
     }
   }
