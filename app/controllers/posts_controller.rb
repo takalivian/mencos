@@ -49,8 +49,13 @@ class PostsController < ApplicationController
     @category = Category.find_by(id: params[:id])
 
     @child = @category.children
-    @posts = Post.where(category_id: @child)
-    @posts_number = Post.where(category_id: @child).count
+    if @category.ancestry == nil
+      @posts = Post.where(category_id: @child)
+      @posts_number = Post.where(category_id: @child).count
+    else
+      @posts = Post.where(category_id: @category)
+      @posts_number = Post.where(category_id: @category).count
+    end
 
   end
 
