@@ -6,7 +6,15 @@
   display:  block;
   margin: 0 auto;
   position:  relative;
-  animation: anime1 3s ease;
+  animation: anime1 2s ease;
+  &__text {
+    font-size: xx-large;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    animation: anime3 3s ease;
+  }
 }
 
 .scroll {
@@ -15,7 +23,7 @@
   right: 50%;
   width: 3em;
   height: 3em;
-  animation: anime2 3s ease;
+  animation: anime2 4s ease;
   span {
     ont-size: x-large;
     width: 1em;
