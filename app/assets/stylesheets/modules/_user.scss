@@ -242,6 +242,7 @@
       }
     }
     .field {
+      margin-bottom: 1rem;
       .form-text {
         padding: 10px 20px;
         border: 1px #ccc solid;
@@ -256,6 +257,9 @@
         height: 47px;
         background-color: #fbfbfb;
       }
+    }
+    .field-radio {
+      margin-top: 2rem;
       .form-area {
         padding: 10px 20px;
         border: 1px #ccc solid;
@@ -285,4 +289,25 @@
       }
     }
   }
+}
+
+.validate-button {
+  margin-top: 1rem;
+}
+.validate-button input[type='radio'] {
+  display: none;
+}
+.validate-button label {
+  background-color: #f4f4f4;
+  padding: 2% 8%;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.125);
+  cursor: pointer;
+}
+.validate-button input[type='radio']:checked + label {
+  background-color: $mainColor;
+  color: #fff;
+} 
+.validate-button label:hover {
+  background-color: #e7e7e7;
 }
