@@ -14,6 +14,10 @@
         .category {
           color: $mainBlack;
         }
+        .category:hover {
+          color: $mainColor;
+          background-color: #fff;
+        }
       }
       
       & ul{
@@ -29,6 +33,7 @@
         padding: 5px;
         display: block;
         cursor: pointer;
+        width: 10rem;
       }
       
       .dropdwn>li{
@@ -41,7 +46,7 @@
         margin-left: -5px;
         margin-top: 5px;
         padding: 0;
-        background: $mainColor;
+        background: dimgrey;
       }
       
       .dropdwn_menu li{
@@ -56,8 +61,8 @@
       }
       
       & li a:hover{
-        background: #b3d7ff;
-        color: rgb(65, 65, 65);
+        background: $mainColor;
+        color: #fff;
       }
       
       .toppage__footer-nav-category{
