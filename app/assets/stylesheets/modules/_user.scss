@@ -45,6 +45,11 @@
                 border: 0.5px solid $mainColor;
                 cursor: pointer;
               }
+              .dm:hover {
+                color: #FFF;
+                background-color: $mainColor;
+                transition-duration: 0.3s;
+              }
               .new-dm {
                 border-radius: 50%;
                 padding: 0.35rem 0.5rem;
@@ -53,6 +58,11 @@
                 font-size: x-large;
                 border: 0.5px solid $mainColor;
                 cursor: pointer;
+              }
+              .new-dm:hover {
+                color: #FFF;
+                background-color: $mainColor;
+                transition-duration: 0.3s;
               }
               .follows {
                 text-decoration: none;
