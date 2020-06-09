@@ -6,9 +6,9 @@
     .categories-wrapper__contents__main
       - @categories.each do |category|
         .categories-wrapper__contents__main__contents
-          .categories-wrapper__contents__main__contents__title
+          #hide-text.categories-wrapper__contents__main__contents__title
             = category.name
-          .categories-wrapper__contents__main__contents__category
+          #text.categories-wrapper__contents__main__contents__category
             %ul
               %li
                 = link_to category_post_path(category), class: 'child' do
