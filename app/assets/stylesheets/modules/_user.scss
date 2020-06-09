@@ -141,6 +141,10 @@
             width: 20rem;
             padding: 2rem 1rem;
           }
+          .link-item:hover {
+            opacity: 0.6;
+            transition-duration: 0.3s;
+          }
           &__image {
 
           }
