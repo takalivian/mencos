@@ -7,20 +7,14 @@
       - @categories.each do |category|
         .categories-wrapper__contents__main__contents
           .categories-wrapper__contents__main__contents__title
-            = link_to category.name, category_post_path(category), class: 'category'
+            = category.name
           .categories-wrapper__contents__main__contents__category
-      
-
-
-      -# -# 仮置
-      -# .categories-wrapper__contents__main__contents
-      -#   .categories-wrapper__contents__main__contents__title
-      -#     メイクアップ
-      -#   .categories-wrapper__contents__main__contents__category
-
-      -# .categories-wrapper__contents__main__contents
-      -#   .categories-wrapper__contents__main__contents__title
-      -#     メイクアップ
-      -#   .categories-wrapper__contents__main__contents__category
-
+            %ul
+              %li
+                = link_to category_post_path(category), class: 'child' do
+                  = category.name
+                  （すべて）
+              - category.children.each do |child|
+                %li
+                  = link_to child.name, category_post_path(child), class: 'child'
 = render "posts/footer"
