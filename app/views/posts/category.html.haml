@@ -5,7 +5,7 @@
       - @categories.each do |category|
         %ul.dropdwn
           %li
-            = link_to category.name, category_post_path(category)
+            = link_to category.name, category_post_path(category), class: 'category'
             %ul.dropdwn_menu
               - category.children.each do |child|
                 %li
