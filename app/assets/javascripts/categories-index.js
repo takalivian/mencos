@@ -15,37 +15,37 @@ $(function(){
 // 子表示
 $(function () {
   $('#hide-text1').on('click', () => {
-      $('#text1').show('slow');
+      $('#text1').toggle('slow');
   });
 });
 
 $(function () {
   $('#hide-text2').on('click', () => {
-      $('#text2').show('slow');
+      $('#text2').toggle('slow');
   });
 });
 
 $(function () {
   $('#hide-text3').on('click', () => {
-      $('#text3').show('slow');
+      $('#text3').toggle('slow');
   });
 });
 
 $(function () {
   $('#hide-text4').on('click', () => {
-      $('#text4').show('slow');
+      $('#text4').toggle('slow');
   });
 });
 
 $(function () {
   $('#hide-text5').on('click', () => {
-      $('#text5').show('slow');
+      $('#text5').toggle('slow');
   });
 });
 
 $(function () {
   $('#hide-text6').on('click', () => {
-      $('#text6').show('slow');
+      $('#text6').toggle('slow');
   });
 });
 
