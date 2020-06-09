@@ -55,7 +55,8 @@
                 商品画像
               - @posts.each do |post|
                 %td
-                  = image_tag post.images[0].url.url, width: "150", height: "150", alt: "pic", class: 'image'
+                  = link_to  post_path(post.id) do
+                    = image_tag post.images[0].url.url, width: "150", height: "150", alt: "pic", class: 'image'
             %tr
               %td.top-main__contents__new-posts__content__title
                 ブランド
