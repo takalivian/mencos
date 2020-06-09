@@ -3,7 +3,8 @@
     -# カテゴリー
     .top-main__contents__category
       .top-main__contents__category__title
-        カテゴリーから探す
+        = link_to categories_path,  class: "category" do
+          カテゴリーから探す
       .top-main__contents__category__content
         %ul
           %li
