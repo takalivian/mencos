@@ -231,9 +231,11 @@
         top: 0;
         left:	0;
         opacity: 0;
+        font-size: x-large;
         background-color:	rgba(0,0,0,0.4);
         -webkit-transition:	all 0.2s ease;
         transition:	all 0.2s ease;
+        cursor: pointer;
       }
       .image-text:hover .mask {
         opacity: 1;
