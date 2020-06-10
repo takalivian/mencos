@@ -3,11 +3,11 @@
   margin: 0 auto;
   &__contents {
     &__category {
-      margin-bottom: 4%;
+      margin-bottom: 9%;
       &__title {
         font-weight: bold;
         font-size: xx-large;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
         .category {
           color: #000;
         }
@@ -35,11 +35,11 @@
       }
     }
     &__new-posts {
-      margin-bottom: 4%;
+      margin-bottom: 10%;
       &__title {
         font-weight: bold;
         font-size: xx-large;
-        margin-bottom: 1%;
+        margin-bottom: 4%;
       }
       &__content {
         width: 100%;
@@ -72,11 +72,11 @@
       }
     }
     &__users {
-      margin-bottom: 4%;
+      margin-bottom: 10%;
       &__title {
         font-weight: bold;
         font-size: xx-large;
-        margin-bottom: 1%;
+        margin-bottom: 4%;
       }
       &__content {
         width: 100%;
