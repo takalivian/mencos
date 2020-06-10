@@ -6,12 +6,12 @@
     .categories-wrapper__contents__main
       - @categories.each do |category|
         .categories-wrapper__contents__main__contents
-          #hide-text.categories-wrapper__contents__main__contents__title
+          .categories-wrapper__contents__main__contents__title
             .categories-wrapper__contents__main__contents__title__text
               = category.name
             .categories-wrapper__contents__main__contents__title__icon
               = icon('fas', 'chevron-down')
-          #text.categories-wrapper__contents__main__contents__category
+          .categories-wrapper__contents__main__contents__category
             %ul
               %li
                 = link_to category_post_path(category), class: 'child' do
