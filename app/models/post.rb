@@ -6,5 +6,6 @@ class Post < ApplicationRecord
   has_many :comments
 
   accepts_nested_attributes_for :images, allow_destroy: true
+  validates :images, :name, :category, :brand, :shop, :praice, :star, :remark, presence: true
 
 end
