@@ -117,7 +117,7 @@
       .top-main__contents__users__title
         人気のユーザー
       .top-main__contents__users__content
-        - @all_ranks.each do |user|
+        - @all_ranks.each_with_index do |user, index|
           = link_to  user_path(user.id) do
             .top-main__contents__users__content__user
               .top-main__contents__users__content__user__image
@@ -125,8 +125,15 @@
                   = image_tag user.image.url, class: 'user-image'
                 - else
                   = image_tag "silhouette.png", alt: "pic", class: 'user-image'
-              .top-main__contents__users__content__user__name
-                = user.name
-              .top-main__contents__users__content__user__follower
-                = icon('fas', 'user')
-                = user.followers.count
+                .top-main__contents__users__content__user__ranking
+                  - if index == 0
+                    = image_tag "ranking1.png", class: 'user-image'
+                  - elsif index == 1
+                    = image_tag "ranking2.png", class: 'user-image'
+                  - elsif index == 2
+                    = image_tag "ranking3.png", class: 'user-image'
+                .top-main__contents__users__content__user__name
+                  = user.name
+                .top-main__contents__users__content__user__follower
+                  = icon('fas', 'user')
+                  = user.followers.count
