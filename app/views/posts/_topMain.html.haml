@@ -117,7 +117,7 @@
       .top-main__contents__users__title
         人気のユーザー
       .top-main__contents__users__content
-        - @users.each do |user|
+        - @all_ranks.each do |user|
           = link_to  user_path(user.id) do
             .top-main__contents__users__content__user
               .top-main__contents__users__content__user__image
