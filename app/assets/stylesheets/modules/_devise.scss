@@ -61,6 +61,22 @@
           text-align: center;
           font-size: larger;
           }
+          .test-login {
+            margin-top: 2rem;
+            .btn-log {
+              color: #fff;
+              box-shadow: none;
+              background-color: navy;
+              border: none;
+              border-radius: 5px;
+              padding: 0 35px;
+              text-align: center;
+              font-size: larger;
+              width: 99%;
+              height: 2.3rem;
+              cursor: pointer;
+            }
+          }
         }
         &__login {
           font-size: 0.8rem;
