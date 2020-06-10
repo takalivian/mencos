@@ -74,7 +74,7 @@
                 カテゴリー
               - @posts.each do |post|
                 %td.top-main__contents__new-posts__content__body
-                  = link_to post.category.name, category_post_path(post),class: 'link'
+                  = link_to post.category.name, category_post_path(post.category),class: 'link'
             %tr
               %td.top-main__contents__new-posts__content__title
                 評価
