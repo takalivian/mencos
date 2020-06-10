@@ -2,7 +2,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order("created_at desc").limit(4)
-    @users = User.all
     @all_ranks = User.find(Relationship.group(:follow_id).order('count(follow_id) desc').limit(5).pluck(:follow_id))
   end
 

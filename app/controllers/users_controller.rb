@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, :only => [:show]
+  before_action :authenticate_user!, only: [:show]
+  before_action :set_user, only: [:show, :edit]
   def show
-    @user = User.find(params[:id])
     unless @user.age.blank?
       @user_age = Agehash.find(@user.age)
     end
@@ -31,7 +31,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
   end
   
   def update
@@ -46,6 +45,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit( :image, :name, :email, :age, :hair_quality, :hair_length, :skin_quality, :beard, :remark)
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 
 end
