@@ -1,15 +1,8 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :set_room, only: [:index, :show]
   def index
-    @currentEntries = current_user.entries
-    myRoomIds = []
-  
-    @currentEntries.each do |entry|
-      myRoomIds << entry.room.id
-    end
-  
-    @anotherEntries = Entry.where(room_id: myRoomIds).where('user_id != ?',current_user)
+
   end
 
   def create
@@ -29,13 +22,17 @@ class RoomsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
 
+
+  end
+
+  private
+
+  def set_room
     @currentEntries = current_user.entries
     myRoomIds = []
     @currentEntries.each do |entry|
       myRoomIds << entry.room.id
     end
     @anotherEntries = Entry.where(room_id: myRoomIds).where('user_id != ?',current_user)
-
   end
-
 end

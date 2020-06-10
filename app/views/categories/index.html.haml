@@ -1,0 +1,23 @@
+= render "posts/header"
+.categories-wrapper
+  .categories-wrapper__contents
+    .categories-wrapper__contents__top
+      カテゴリー
+    .categories-wrapper__contents__main
+      - @categories.each do |category|
+        .categories-wrapper__contents__main__contents
+          .categories-wrapper__contents__main__contents__title
+            .categories-wrapper__contents__main__contents__title__text
+              = category.name
+            .categories-wrapper__contents__main__contents__title__icon
+              = icon('fas', 'chevron-down')
+          .categories-wrapper__contents__main__contents__category
+            %ul
+              %li
+                = link_to category_post_path(category), class: 'child' do
+                  = category.name
+                  （すべて）
+              - category.children.each do |child|
+                %li
+                  = link_to child.name, category_post_path(child), class: 'child'
+= render "posts/footer"

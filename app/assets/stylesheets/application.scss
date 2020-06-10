@@ -1,7 +1,9 @@
 @import "reset";
+@import "keyframes";
 @import "config/variable";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "loading";
 // post
 @import "modules/topHeader";
 @import "modules/topContent";
@@ -16,3 +18,5 @@
 @import "modules/following";
 // DM
 @import "modules/roomShow";
+// カテゴリー
+@import "modules/categoriesIndex";

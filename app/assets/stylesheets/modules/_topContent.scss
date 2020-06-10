@@ -1,20 +1,44 @@
 .top-content {
   background-image: image-url("cosme.jpg");
-  height: 48rem;
+  height: calc(100vh - 4rem);
   background-repeat: no-repeat;
   background-position: center;
   display:  block;
   margin: 0 auto;
   position:  relative;
-  animation: anime1 3s ease;
-}
-@keyframes anime1 {
-  0% {
-      opacity:  0;
-      top: 50px;
+  animation: anime1 2s ease;
+  &__text {
+    font-size: xx-large;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    animation: anime3 3s ease;
   }
-  100% {
-      opacity:  1;
-      top: 0;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 5%;
+  right: 50%;
+  width: 3em;
+  height: 3em;
+  animation: anime2 4s ease;
+  span {
+    ont-size: x-large;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    transform: translateY(0) rotate(-45deg);
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    z-index: 2;
+    animation: popping-arrow 2s infinite ease-out;
+  }
+  &:hover span {
+    transform: translateY(.5em) rotate(-45deg) ;
+    animation: paused;
   }
 }

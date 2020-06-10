@@ -3,11 +3,14 @@
   margin: 0 auto;
   &__contents {
     &__category {
-      margin-bottom: 4%;
+      margin-bottom: 9%;
       &__title {
         font-weight: bold;
         font-size: xx-large;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
+        .category {
+          color: #000;
+        }
       }
       &__content {
         width: 100%;
@@ -24,15 +27,19 @@
               font-size: larger;
             }
           }
+          & li:hover {
+            opacity: 0.6;
+            transition-duration: 0.3s;
+          }
         }
       }
     }
     &__new-posts {
-      margin-bottom: 4%;
+      margin-bottom: 10%;
       &__title {
         font-weight: bold;
         font-size: xx-large;
-        margin-bottom: 1%;
+        margin-bottom: 4%;
       }
       &__content {
         width: 100%;
@@ -65,11 +72,11 @@
       }
     }
     &__users {
-      margin-bottom: 4%;
+      margin-bottom: 10%;
       &__title {
         font-weight: bold;
         font-size: xx-large;
-        margin-bottom: 1%;
+        margin-bottom: 4%;
       }
       &__content {
         width: 100%;
@@ -78,27 +85,42 @@
         overflow: scroll;
         .user {
         }
+        .user:hover {
+          opacity: 0.6;
+          transition-duration: 0.3s;
+        }
         &__user  {
           color: $mainBlack;
-          width: 144px;
+          width: 9rem;
           flex-shrink: 0;
           border-radius: 16px;
           border: 2px solid #F5F5F5;
           box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
-          margin: 16px 8px;
           text-align: center;
-          padding: 10px;
+          padding: 0.5rem;
           &__image {
             width: 100%;
             margin: 1rem 0;
+            position: relative;
             .user-image {
-              width: 80px;
-              height: 80px;
+              width: 5rem;
+              height: 5rem;
               object-fit: cover;
               border-radius: 50%;
               display: block;
               margin: 0 auto;
               border: 0.5px solid #DCD4D4;
+              
+            }
+          }
+          &__ranking {
+            position: absolute;
+            top: -0.5rem;
+            .ranking-image {
+              width: 3rem;
+              height: 2.5rem;
+              object-fit: fill;
+              border-radius: 50%;
             }
           }
           &__name {
@@ -109,7 +131,11 @@
             font-size: x-small;
             color: #999;
           }
-        } 
+        }
+        &__user:hover {
+          opacity: 0.6;
+          transition-duration: 0.3s;
+        }
       }
     }
   }

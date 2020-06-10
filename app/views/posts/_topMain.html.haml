@@ -3,7 +3,8 @@
     -# カテゴリー
     .top-main__contents__category
       .top-main__contents__category__title
-        カテゴリーから探す
+        = link_to categories_path,  class: "category" do
+          カテゴリーから探す
       .top-main__contents__category__content
         %ul
           %li
@@ -54,7 +55,8 @@
                 商品画像
               - @posts.each do |post|
                 %td
-                  = image_tag post.images[0].url.url, width: "150", height: "150", alt: "pic", class: 'image'
+                  = link_to  post_path(post.id) do
+                    = image_tag post.images[0].url.url, width: "150", height: "150", alt: "pic", class: 'image'
             %tr
               %td.top-main__contents__new-posts__content__title
                 ブランド
@@ -72,7 +74,7 @@
                 カテゴリー
               - @posts.each do |post|
                 %td.top-main__contents__new-posts__content__body
-                  = post.category.name
+                  = link_to post.category.name, category_post_path(post.category),class: 'link'
             %tr
               %td.top-main__contents__new-posts__content__title
                 評価
@@ -115,7 +117,7 @@
       .top-main__contents__users__title
         人気のユーザー
       .top-main__contents__users__content
-        - @users.each do |user|
+        - @all_ranks.each_with_index do |user, index|
           = link_to  user_path(user.id) do
             .top-main__contents__users__content__user
               .top-main__contents__users__content__user__image
@@ -123,8 +125,15 @@
                   = image_tag user.image.url, class: 'user-image'
                 - else
                   = image_tag "silhouette.png", alt: "pic", class: 'user-image'
-              .top-main__contents__users__content__user__name
-                = user.name
-              .top-main__contents__users__content__user__follower
-                = icon('fas', 'user')
-                = user.followers.count
+                .top-main__contents__users__content__user__ranking
+                  - if index == 0
+                    = image_tag "ranking1.png", class: 'ranking-image'
+                  - elsif index == 1
+                    = image_tag "ranking2.png", class: 'ranking-image'
+                  - elsif index == 2
+                    = image_tag "ranking3.png", class: 'ranking-image'
+                .top-main__contents__users__content__user__name
+                  = user.name
+                .top-main__contents__users__content__user__follower
+                  = icon('fas', 'user')
+                  = user.followers.count

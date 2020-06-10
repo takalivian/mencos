@@ -23,6 +23,9 @@
             マイページ
         %li
           = link_to rooms_path,  class: "btn-user" do
-            メッセージ
+            メッセージ一覧
+        %li
+          = link_to categories_path,  class: "btn-user" do
+            カテゴリーから探す
         %li
           = link_to 'ログアウト', destroy_user_session_path, class: "headerContent__rightBox--items", method: :delete

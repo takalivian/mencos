@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     end
     resources :comments, only: :create
   end
+  resources :categories, only: [:index]
   resources :users, only: [:show, :edit, :update] do
     member do
       get :following, :followers

@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true, length:{maximum: 10}
   
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create

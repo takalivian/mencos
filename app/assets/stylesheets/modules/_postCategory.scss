@@ -9,9 +9,60 @@
     &__category-list {
       display: flex;
       justify-content: space-between;
-      .parent {
-        color: #5F5354;
+      .dropdwn{
         font-size: medium;
+        .category {
+          color: $mainBlack;
+        }
+        .category:hover {
+          color: $mainColor;
+          background-color: #fff;
+        }
+      }
+      
+      & ul{
+        text-align: center;
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 0;
+        color: #fff;
+      }
+      & li{
+        max-width: calc(1200px/5);
+        position: relative;
+        padding: 5px;
+        display: block;
+        cursor: pointer;
+        width: 10rem;
+      }
+      
+      .dropdwn>li{
+      }
+      
+      .dropdwn_menu{
+        width: 100%;
+        display: none;
+        position: absolute;
+        margin-left: -5px;
+        margin-top: 5px;
+        padding: 0;
+        background: dimgrey;
+      }
+      
+      .dropdwn_menu li{
+        width: 100%;
+      }
+      
+      .dropdwn_menu li a{
+        padding: 5px 0;
+        margin: -5px 5px -5px -5px;
+        display: block;
+        color: #fff;
+      }
+      
+      & li a:hover{
+        background: $mainColor;
+        color: #fff;
       }
     }
     &__category-title {
@@ -51,3 +102,4 @@
     }
   }
 }
+

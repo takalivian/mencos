@@ -10,7 +10,7 @@
           .field
             = f.label :ニックネーム
             %br/
-            = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ニックネーム", class: "form-text"
+            = f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "ニックネーム", class: "form-text",maxlength: "20"
           .field
             = f.label :メールアドレス
             %br/
