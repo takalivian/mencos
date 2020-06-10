@@ -102,6 +102,7 @@
           &__image {
             width: 100%;
             margin: 1rem 0;
+            position: relative;
             .user-image {
               width: 80px;
               height: 80px;
@@ -110,6 +111,17 @@
               display: block;
               margin: 0 auto;
               border: 0.5px solid #DCD4D4;
+              
+            }
+          }
+          &__ranking {
+            position: absolute;
+            top: -0.5rem;
+            .ranking-image {
+              width: 3rem;
+              height: 2.5rem;
+              object-fit: fill;
+              border-radius: 50%;
             }
           }
           &__name {

@@ -127,11 +127,11 @@
                   = image_tag "silhouette.png", alt: "pic", class: 'user-image'
                 .top-main__contents__users__content__user__ranking
                   - if index == 0
-                    = image_tag "ranking1.png", class: 'user-image'
+                    = image_tag "ranking1.png", class: 'ranking-image'
                   - elsif index == 1
-                    = image_tag "ranking2.png", class: 'user-image'
+                    = image_tag "ranking2.png", class: 'ranking-image'
                   - elsif index == 2
-                    = image_tag "ranking3.png", class: 'user-image'
+                    = image_tag "ranking3.png", class: 'ranking-image'
                 .top-main__contents__users__content__user__name
                   = user.name
                 .top-main__contents__users__content__user__follower
