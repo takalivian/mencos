@@ -54,7 +54,7 @@
               %td.top-main__contents__new-posts__content__title
                 商品画像
               - @posts.each do |post|
-                %td
+                %td.top-main__contents__new-posts__content__body-img
                   = link_to  post_path(post.id) do
                     = image_tag post.images[0].url.url, width: "150", height: "150", alt: "pic", class: 'image'
             %tr
