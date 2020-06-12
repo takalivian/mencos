@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   omniauth_callbacks: 'users/omniauth_callbacks',
   registrations: 'users/registrations'
   }
-  get    '/auth/:provider/callback', to: 'foo#bar'
   root to:"posts#index"
   resources :posts, only: [:index, :new, :create, :show] do
     member do
