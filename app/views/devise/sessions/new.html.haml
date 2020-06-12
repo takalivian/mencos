@@ -30,6 +30,6 @@
               = f.submit 'テストユーザーでログイン', class: 'btn-log'
         .account-new-page__low__contents__right__login
           アカウントをお持ちで無い方は
-          %a(href="sign_up") こちら
+          = link_to "こちら", new_user_registration_path
           から新規登録
 = render "posts/footer"

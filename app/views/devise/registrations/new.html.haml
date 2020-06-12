@@ -36,6 +36,6 @@
             Googleでログイン
         .account-new-page__low__contents__right__login
           アカウントをお持ちの方は
-          %a(href="sign_in") こちら
+          = link_to "こちら", new_user_session_path
           からログイン
 = render "posts/footer"
