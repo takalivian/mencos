@@ -4,6 +4,9 @@
 メンズ専用のコスメレビューサイトです。
 ## App URL
 https://www.mencos-t.com/
+
+テストユーザーで誰でも登録なしでログインできます。
+<img width="912" alt="mencos-login" src="https://user-images.githubusercontent.com/61145524/84590843-dc14a000-ae74-11ea-85df-929f60b55d4e.png">
 ## 機能
 - 投稿
   - 画像複数投稿可
