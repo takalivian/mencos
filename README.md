@@ -30,8 +30,8 @@ https://www.mencos-t.com/
 [![Image from Gyazo](https://i.gyazo.com/bc0406ed14a23012be26fcd0c751092d.gif)](https://gyazo.com/bc0406ed14a23012be26fcd0c751092d)
 - 検索
   - カテゴリー検索
-  - ユーザーのフォロー数のランキング表示
 [![Image from Gyazo](https://i.gyazo.com/993e2f92c321c2be2f3e9e4024c2f99b.gif)](https://gyazo.com/993e2f92c321c2be2f3e9e4024c2f99b)
+  - ユーザーのフォロー数のランキング表示
 ## 開発環境
 - 言語 ： Ruby, javascript(jQuery)
 - フレームワーク ： Ruby on Rails
