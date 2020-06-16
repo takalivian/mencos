@@ -11,12 +11,6 @@ $(function(){
         'width': `calc(100% - (20% * ${$lis.length}))`
       })
     }
-    // else if($lis.length == 5 ){
-    //   $ul.append(append_input)
-    //   $('#previews .input').css({
-    //     'width': `100%`
-    //   })
-    // }
     else if($lis.length <= 2 ){
       $ul.append(append_input)
       $('#previews .input').css({
@@ -82,14 +76,6 @@ $(function(){
           'width': `calc(100% - (20% * ${$lis.length}))`
         })
       }
-      // else if($lis.length == 5 ){
-      //   $li.addClass('image-preview');
-      //   $ul.append(append_input)
-      //   $('#previews li:last-child').css({
-      //     'width': `100%`
-      //   })
-      // }
-      // ９個のプレビューのとき、1個のinputを追加。最後の数は9です。
       else if($lis.length <= 2 ){
         $li.addClass('image-preview');
         $ul.append(append_input)
@@ -137,12 +123,6 @@ $(document).on('click','.image-preview_btn_delete',function(){
       'width': `calc(100% - (20% * ${$lis.length}))`
     })
   }
-  // else if($lis.length == 5 ){
-  //   // inputのサイズを変更
-  //   $('#previews li:last-child').css({
-  //     'width': `100%`
-  //   })
-  // }
   else if($lis.length < 2 ){
     // inputのサイズを変更
     $('#previews li:last-child').css({
