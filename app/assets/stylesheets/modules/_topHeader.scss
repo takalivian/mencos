@@ -178,3 +178,23 @@ span {
   transition:  transform 1s ease, opacity .9s ease;
 }
 }
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .header {
+    height: 4rem;
+    width: 100vw;
+    &__content {
+      width: 90%;
+      &__right {
+        font-size: x-large;
+      }
+      &__left {
+        display: none;
+      }
+    }
+  }
+  #nav-toggle {
+    top: 18px;
+  }
+}
