@@ -211,7 +211,7 @@
 }
 // ユーザー編集
 .edit-user {
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
   margin-top: 56px;
   margin-bottom: 56px;
@@ -376,5 +376,25 @@
   }
   .user-show-wrapper__row__post-contents__items {
     padding: 0;
+  }
+
+  .modal {
+    top: 7%;
+    left: 11%;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+  }
+
+  .edit-user__row {
+    margin: 1rem;
+    width: auto;
+  }
+  .validate-button label {
+    padding: 3%;
+    font-size: small;
+  }
+  .edit-user__row .field-radio .form-area {
+    width: 77%;
   }
 }
