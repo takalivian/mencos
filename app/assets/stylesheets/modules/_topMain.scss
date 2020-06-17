@@ -146,3 +146,43 @@
 a {
   text-decoration: none;
 }
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .top-main__contents__category__title {
+    font-size: x-large;
+    padding-left: 5%;
+  }
+  .top-main__contents__category__content ul li {
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 1rem;
+    .img-link {
+    }
+    & img {
+      width: 90%;
+      height: 90%;
+      margin: auto;
+      margin-left: 0.6rem;
+    }
+    .title {
+      font-size: small;
+    }
+  }
+  .top-main__contents__new-posts__title {
+    font-size: x-large;
+    padding-left: 5%;
+  }
+  .top-main__contents__new-posts__content__head tr td.top-main__contents__new-posts__content__body-img {
+    padding: 0;
+  }
+  .top-main__contents__new-posts__content__head tr td {
+    border: 1px solid #E8E1E1;
+    padding: 0.5rem;
+  }
+  .top-main__contents__users__title {
+    font-size: x-large;
+    padding-left: 5%;
+  }
+}
