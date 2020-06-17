@@ -2,11 +2,11 @@
 .room-show-wrapper
   .room-show-wrapper__contents
     .room-show-wrapper__contents__main
-      .room-show-wrapper__contents__main__left
-        .room-show-wrapper__contents__main__left__title
+      .room-show-wrapper__contents__main__left2
+        .room-show-wrapper__contents__main__left2__title
           Direct
         - if @currentEntries.present?
-          .room-show-wrapper__contents__main__left__list
+          .room-show-wrapper__contents__main__left2__list
             - @anotherEntries.each do |e|
               = link_to room_path(e.room.id) do
                 .room-list

@@ -203,6 +203,61 @@
     line-height: 40rem;
   }
 }
+.room-show-wrapper__contents__main__left2 {
+  height: 100%;
+  overflow: hidden;
+  width: 350px;
+  border: 1px solid #E8E1E1;
+  border-right: none;
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    height: 60px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 1px solid #E8E1E1;
+  }
+  &__list {
+    height: calc(100% - 60px);
+    width: 100%;
+    padding: 1rem 0;
+    overflow: scroll;
+    box-sizing: border-box;
+    .room-list {
+      padding: 0 10px;
+      height: 10%;
+      display: flex;
+      margin-bottom: 30px;
+      font-size: 10px;
+      &__image {
+        width: 100px;
+        margin: auto 0;
+        .message-user-image {
+          border-radius: 50%;
+          height: 75px;
+          width: 75px;
+          border: 0.5px solid #DCD4D4;
+        }
+      }
+      &__talk-box {
+        color: #555;
+        font-size: 10px;
+        margin: auto 0;
+        &__name{
+          font-weight: bold;
+          font-size: 14px;
+        }
+        &__last-talk{
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
 .messages-date {
   text-align: center;
   padding-bottom: 5%;
