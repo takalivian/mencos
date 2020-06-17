@@ -42,3 +42,13 @@
     animation: paused;
   }
 }
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .top-content {
+    background-size: 47rem;
+  }
+  .top-content__text {
+    font-size: x-large;
+  }
+}

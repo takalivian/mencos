@@ -19,6 +19,8 @@
           = link_to "/", class: "btn-top" do
             Men's Cosmetic
         %li
+          = link_to '投稿する', new_post_path
+        %li
           = link_to user_path(current_user),  class: "btn-user" do
             マイページ
         %li

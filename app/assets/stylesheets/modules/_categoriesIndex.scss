@@ -1,5 +1,5 @@
 .categories-wrapper {
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto;
   margin-top: 56px;
   margin-bottom: 56px;
@@ -37,6 +37,9 @@
           display: flex;
           justify-content: space-between;
           cursor: pointer;
+          &__text {
+            padding-right: 0.1rem;
+          }
         }
         &__category {
           display: none;
@@ -57,5 +60,28 @@
         }
       }
     }
+  }
+}
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .categories-wrapper {
+    margin: 1rem;
+  }
+  .categories-wrapper__contents__top {
+    font-size: x-large;
+  }
+  .categories-wrapper__contents__main {
+    width: fit-content;
+    margin: auto;
+  }
+  .categories-wrapper__contents__main__contents {
+    width: 40vw;
+  }
+  .categories-wrapper__contents__main__contents__title {
+    font-size: small;
+  }
+  .categories-wrapper__contents__main__contents__category .child {
+    font-size: x-small;
   }
 }

@@ -1,5 +1,5 @@
 .post-category-wrapper {
-  width: 980px;
+  max-width: 980px;
   margin: 0 auto;
   margin-top: 56px;
   margin-bottom: 56px;
@@ -103,3 +103,19 @@
   }
 }
 
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .post-category-wrapper {
+    padding: 0 1rem;
+  }
+  .post-category-wrapper__contents__category-list {
+    overflow: scroll;
+  }
+  .post-category-wrapper__contents__category-list li {
+    width: max-content;
+    padding: 0 1rem;
+  }
+  .post-category-wrapper__contents__posts__list {
+    width: 100%;
+  }
+}

@@ -6,7 +6,7 @@
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
+  z-index: 10000;
   display: none;
 }
 
@@ -61,4 +61,24 @@
   right: 12px;
   color: rgba(128, 128, 128, 0.46);
   cursor: pointer;
+}
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .modal {
+    top: 7%;
+    left: 11%;
+    width: 80%;
+    height: 80%;
+    text-align: center;
+  }
+  h1 {
+    font-size: 70%;
+  }
+  .modal .follow-body .follow {
+    padding: 0;
+  }
+  .modal .follow-body__name-box {
+    margin-left: 1rem;
+  }
 }

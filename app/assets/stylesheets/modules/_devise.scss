@@ -3,7 +3,7 @@
   height: calc(100vh - 11.5rem);
   width: 100vw;
   &__low {
-    width: 750px;
+    max-width: 750px;
     margin: auto;
     padding: 5%;
     &__title {
@@ -20,6 +20,7 @@
         width: 47%;
         .field {
           margin-bottom: 1rem;
+          width: fit-content;
           .form-text {
             height: 1rem;
             width: 18rem;
@@ -88,5 +89,34 @@
         }
       }
     }
+  }
+}
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .account-new-page {
+    height: auto;
+  }
+  .account-new-page__low__title {
+    margin-bottom: 1rem;
+  }
+  .account-new-page__low__contents {
+    display: block;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  .account-new-page__low__contents__left .field .form-text {
+    width: 12rem;
+  }
+  .account-new-page__low__contents__right__sns .sns-login {
+    padding: 8px 12px;
+    font-size: larger;
+  }
+  .account-new-page__low__contents__right__sns {
+    margin-top: 3rem;
+  }
+  .account-new-page__low__contents__right__sns .test-login .btn-log {
+    font-size: medium;
+    padding: 0;
   }
 }

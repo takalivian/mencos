@@ -100,3 +100,27 @@
     }
   }
 }
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .new-post-wrapper__main__contents .field .clearfix .image_upload {
+    width: 15rem;
+  }
+  .new-post-wrapper__main__contents .field #previews {
+    display: block;
+  }
+  .new-post-wrapper__main__contents .field .clearfix {
+    height: auto;
+    border: none;
+    background-color: #fff;
+  }
+  .new-post-wrapper__main__contents .field-submit .post-btn {
+    width: 7rem;
+  }
+  .new-post-wrapper__main__contents .field .text {
+    width: 82%;
+  }
+  .new-post-wrapper__main__contents .field .listing-select-wrapper__box--select {
+    width: 100%;
+  }
+}
