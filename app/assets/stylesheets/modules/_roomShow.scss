@@ -188,16 +188,21 @@
             }
           }
         }
-        &__no {
-          text-align: center;
-          font-size: x-large;
-          line-height: 40rem;
-        }
       }
     }
   }
 }
 
+.room-show-right {
+  height: 100%;
+  width: calc(100% - 350px);
+  border: 1px solid #E8E1E1;
+  &__no {
+    text-align: center;
+    font-size: x-large;
+    line-height: 40rem;
+  }
+}
 .messages-date {
   text-align: center;
   padding-bottom: 5%;
@@ -207,4 +212,24 @@
   text-align: center;
   font-size: inherit;
   line-height: 33rem;
+}
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .room-show-right {
+    display: none;
+  }
+  .room-show-wrapper__contents__main__left {
+    display: none;
+  }
+  .room-show-wrapper__contents__main__right {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #E8E1E1;
+  }
+  .room-show-wrapper__contents__main__right__message__bottom .new_message .form-text {
+    width: 70%;
+    padding-left: 1rem;
+    font-size: small;
+  }
 }
