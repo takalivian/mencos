@@ -16,3 +16,13 @@
     }
   }
 }
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .footer__content__top {
+    font-size: large;
+  }
+  .footer__content__bottom {
+    font-size: xx-small;
+  }
+}
