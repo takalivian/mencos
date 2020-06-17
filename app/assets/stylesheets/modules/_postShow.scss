@@ -185,3 +185,25 @@
     }
   }
 }
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .show-post-wrapper__main {
+    margin: 8px 1rem 0px;
+  }
+  .show-post-wrapper__main__user {
+    display: block;
+  }
+  .show-post-wrapper__main__comments__submit__box .comment-text {
+    width: 70%;
+  }
+  .show-post-wrapper__main__images p {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-size: large;
+  }
+  .show-post-wrapper__main__info {
+    font-size: x-small;
+  }
+}
