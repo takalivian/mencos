@@ -325,3 +325,56 @@
 .validate-button label:hover {
   background-color: #e7e7e7;
 }
+
+// レスポンシブ
+@media screen and (max-width: 480px) {
+  .user-show-wrapper {
+    width: 100vw;
+    margin: 0 auto;
+    margin: 1rem 0;
+  }
+  .user-show-wrapper__row__user-contents {
+    display: block;
+  }
+  .user-show-wrapper__row__user-contents__left {
+    height: 6rem;
+    width: 6rem;
+    padding: 5%;
+    margin: auto;
+  }
+  .user-show-wrapper__row__user-contents__right__top {
+    display: block;
+    &__name {
+      text-align: center;
+    }
+  }
+  .user-show-wrapper__row__user-contents__right {
+    width: 100vw;
+    padding: 0 0 5% 0;
+  }
+  .user-show-wrapper__row__user-contents__right__top__follow {
+    font-size: x-large;
+    margin: 1rem auto;
+    width: fit-content;
+  }
+  .user-show-wrapper__row__user-contents__right__top__name {
+    font-size: x-large;
+  }
+  .user-show-wrapper__row__user-contents__right__data {
+      font-size: xx-small;
+      letter-spacing: 0;
+      text-align: center;
+  }
+  .user-show-wrapper__row__user-contents__right__count {
+    font-size: small;
+    width: fit-content;
+    margin: auto;
+  }
+  .user-show-wrapper__row__user-contents__right__info__text {
+    font-size: small;
+    padding: 1rem 1.5rem;
+  }
+  .user-show-wrapper__row__post-contents__items {
+    padding: 0;
+  }
+}
