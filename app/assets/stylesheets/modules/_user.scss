@@ -77,6 +77,7 @@
                 background-color: #fff;
                 border: 1px solid $mainColor;
                 height: 100%;
+                -webkit-appearance: none;
                 cursor: pointer;
               }
               .follow-now {
@@ -93,6 +94,7 @@
                 border: 1px solid $mainColor;
                 height: 100%;
                 margin-left: 2rem;
+                -webkit-appearance: none;
                 cursor: pointer;
               }
             }
