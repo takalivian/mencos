@@ -17,6 +17,7 @@ https://www.mencos-t.com/
 - 投稿
   - 画像複数投稿可
   - 画像プレビュー
+  - 画像拡大
   - コメント機能
   - ancestryを用いてカテゴリー選択
   - 星評価機能
@@ -25,6 +26,7 @@ https://www.mencos-t.com/
   - Googleログイン
   - 簡単ログイン
   - 画像プレビュー
+  - 画像拡大
   - フォロー、フォロワー機能
   - DM機能
 [![Image from Gyazo](https://i.gyazo.com/bc0406ed14a23012be26fcd0c751092d.gif)](https://gyazo.com/bc0406ed14a23012be26fcd0c751092d)
@@ -32,6 +34,7 @@ https://www.mencos-t.com/
   - カテゴリー検索
 [![Image from Gyazo](https://i.gyazo.com/993e2f92c321c2be2f3e9e4024c2f99b.gif)](https://gyazo.com/993e2f92c321c2be2f3e9e4024c2f99b)
   - ユーザーのフォロー数のランキング表示
+- レスポンシブデザイン
 ## 開発環境
 - 言語 ： Ruby, javascript(jQuery)
 - フレームワーク ： Ruby on Rails
