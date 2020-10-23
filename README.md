@@ -9,7 +9,7 @@
 
 このアプリでは自分と同じ肌質や髪質、年代などのユーザーのレビューを見て買うことができるので、コスメ選びに迷うことはありません。
 ## App URL
-https://www.mencos-t.com/
+http://www.mencos-y.com/
 
 テストユーザーで誰でも登録なしでログインできます。
 <img width="912" alt="mencos-login" src="https://user-images.githubusercontent.com/61145524/84590843-dc14a000-ae74-11ea-85df-929f60b55d4e.png">
